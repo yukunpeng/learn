@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>郑州掌麟科技</title>
+    <script src="active/jquery-2.2.0.js"></script>
+    <script src="active/web.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        img{
+            border: none;
+        }
+        a{
+            text-decoration: none;
+            color: #666;
+            font-size: 12px;
+        }
+        a:hover{
+            color: #f60;
+        }
+        ul{
+            list-style-type: none;
+        }
+        /*header*/
+        header{
+            border-bottom: 1px solid #dbdbdb;
+        }
+        header .content{
+            width: 950px;
+            margin: 0 auto;
+            height: 65px;
+            position: relative;
+        }
+        header .logo{
+            display: block;
+            height: 65px;
+            width: 183px;
+            background: url("asset/logo1.png") no-repeat 50%;
+        }
+        header .switch{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 30px;
+        }
+        header .switch a{
+            line-height: 16px;
+            height: 16px;
+            display: inline-block;
+        }
+        header .phone{
+            padding-left: 15px;
+            background: url(asset/lang_phone_icon.jpg) no-repeat 0 50%;
+        }
+        header .pad{
+            margin-left: 5px;
+            padding-left: 20px;
+            background: url(asset/icon_pad.png) no-repeat 0 50%;
+        }
+        nav{
+            border-bottom: 2px solid #f60;
+        }
+        nav .content{
+            width: 950px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        nav .content a{
+            font-size: 14px;
+            line-height: 34px;
+            height: 34px;
+            font-weight: bold;
+            padding: 0 30px;
+            display: block;
+        }
+        nav .content ul a:hover,nav .content ul a.active:hover{
+            background-color: #ff6600;
+            color: #fff;
+        }
+        nav .content a.active{
+            color: #ff6600;
+        }
+        nav .content li{
+            float: left;
+        }
+        nav .content li:first-child{
+            background: url(asset/navigation.jpg) no-repeat 50% 100%;
+        }
+        nav .chat{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        nav .chat a{
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+            overflow: hidden;
+            padding: 0;
+            cursor: pointer;
+        }
+        nav .sina{
+            background: url(asset/share_icon.png) 0 0 no-repeat;
+        }
+        nav .sina:hover{
+            background-position: 0 100%;
+        }
+        nav .tencent{
+            background: url(asset/share_icon.png) -22px 0 no-repeat;
+        }
+        nav .tencent:hover{
+            background-position: -22px 100%;
+        }
+        #main{
+            width: 950px;
+            margin: 0 auto;
+        }
+        #main .nav{
+            overflow: hidden;
+        }
+        #main .nav li{
+            width: 237px;
+            height: 210px;
+            overflow: hidden;
+            background: url(asset/corp_img_link.jpg) no-repeat;
+            float: left;
+            cursor: pointer;
+        }
+        #main .nav li.gsgk:hover{
+            background-position: 0 -450px;
+        }
+        #main .nav li.gsdt{
+            background-position: -236px 0;
+        }
+        #main .nav li.gsdt:hover{
+            background-position: -236px -450px;
+        }
+        #main .nav li.gltd{
+            background-position: -473px 0;
+        }
+        #main .nav li.gltd:hover{
+            background-position: -473px -450px;
+        }
+        #main .nav li.qywh{
+            background-position: -711px 0;
+            width: 239px;
+        }
+        #main .nav li.qywh:hover{
+            background-position: -711px -450px;
+        }
+        #main .desc{
+            margin-top: 10px;
+            position: relative;
+        }
+        #main .desc li{
+            width: 928px;
+            border: 1px solid #666;
+            padding: 20px 10px;
+            font-size: 12px;
+            color: #666;
+            display: none;
+        }
+        #main .desc .title{
+            position: absolute;
+            background-color: white;
+            padding: 0 3px;
+            margin: -28px 0 0 0;
+        }
+        #main .link{
+            margin: 20px 0 30px 0;
+            font-size: 12px;
+            color: #666;
+        }
+        #main .link a.active{
+            color: #f60;
+        }
+        #main .link span{
+            padding: 0 2px 0 3px;
+        }
+        #mainNav {
+            border-top: 1px solid #dbdbdb;
+        }
+        #mainNav .fold{
+            width: 950px;
+            height: 0;
+            margin: 0 auto;
+            position: relative;
+        }
+        #mainNav .fold a{
+            display: block;
+            position: absolute;
+            width: 93px;
+            height: 24px;
+            background: url(asset/web_map_btn.png) no-repeat 0 0;
+            right: 0;
+        }
+
+        #mainNav .content{
+            width: 830px;
+            margin: 0 auto;
+            font-size: 12px;
+            overflow: hidden;
+            padding: 0 0 100px 120px;
+        }
+        #mainNav dl{
+            float: left;
+            margin:0 30px
+        }
+        #mainNav dt{
+            color: #999;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        #mainNav dd{
+            margin: 5px 0;
+        }
+        footer{
+            background-color: #d6d6d6;
+            text-align: center;
+            height: 85px;
+            line-height: 85px;
+            font-size: 12px;
+            color: #666;
+        }
+        footer a{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="content">
+        <a href="#" class="logo"></a>
+        <div class="switch">
+            <a href="#" class="phone">手机版</a>
+            <a href="#" class="pad">pad版</a>
+        </div>
+    </div>
+</header>
+<nav>
+    <div class="content">
+        <ul>
+            <li><a href="#" class="active">公司</a></li>
+            <li><a href="#">招聘</a></li>
+        </ul>
+        <div class="chat">
+            <a class="sina"></a>
+            <a class="tencent"></a>
+        </div>
+    </div>
+</nav>
+<div id="main">
+    <img src="asset/com_index.jpg" />
+    <ul class="nav">
+        <li class="gsgk"></li>
+        <li class="gsdt"></li>
+        <li class="gltd"></li>
+        <li class="qywh"></li>
+    </ul>
+    <ul class="desc">
+        <li class="gsgk">
+            <h3 class="title">公司概况</h3>
+            掌麟科技有限公司简称掌麟科技（英文名称：mobikylin），是一家移动互联网游戏开发商，致力于为全球移动平台开发游戏，公司汇聚了一批来自国内知名游戏及互联网公司的网络精英及高素质管理人才，本着以玩家为本的服务原则，不断提高服务种类和质量，形成活力、创新、团结、服务的企业文化。
+        </li>
+        <li class="gsdt">
+            <h3 class="title">公司动态</h3>
+            掌麟科技有限公司简称掌麟科技（英文名称：mobikylin），是一家移动互联网游戏开发商，致力于为全球移动平台开发游戏，公司汇聚了一批来自国内知名游戏及互联网公司的网络精英及高素质管理人才，本着以玩家为本的服务原则，不断提高服务种类和质量，形成活力、创新、团结、服务的企业文化。
+        </li>
+        <li class="gltd">
+            <h3 class="title">管理团队</h3>
+            掌麟科技有限公司简称掌麟科技（英文名称：mobikylin），是一家移动互联网游戏开发商，致力于为全球移动平台开发游戏，公司汇聚了一批来自国内知名游戏及互联网公司的网络精英及高素质管理人才，本着以玩家为本的服务原则，不断提高服务种类和质量，形成活力、创新、团结、服务的企业文化。
+        </li>
+        <li class="qywh">
+            <h3 class="title">企业文化</h3>
+            愿景：全球领先的互联网服务企业<br/>
+            使命：轻松游戏，分享快乐<br/>
+            价值观：讲诚信、乐分享、要简单、爱完美<br/>
+            诚信：诚信为立人之本，立业之基。真诚待人，说真话，做实事，才能内心坦荡。信守承诺，言必信，行必果！做不到的事情不要承诺，承诺了的事情一定要做到！言行一致是最有影响力的人。<br/>
+            分享：赠人玫瑰，手留余香。融入团队，教学相长，最快的成长方式是融入，最好的学习方式是教别人，分享带动整体水平的提高。真心帮助别人，同时成就自己。上善若水，滋养而无求，无求而无所不求。<br/>
+            简单： 1+1等于几？ 做事抓住本质，沟通简明扼要。化繁为简，抓大放小，适当授权，关注过程，保证结果。摒弃层级观念，直接跟需要的人沟通，讲话逻辑清楚，要点明确。<br/>
+            完美：浓厚的兴趣胜过所有的专家。复杂的事情简单做，简单的事情重复做，重复的事情完美做。世界级标准，破记录思考模式。天下武功，唯快不破。<br/>
+            员工意识：团队意识；竞争意识；服务意识；危机意识；成长意识；创新意识。<br/>
+            企业宗旨：传递快乐 创造价值！<br/>
+            　 企业精神：乐于创新 激情奋斗。<br/>
+        </li>
+    </ul>
+    <div class="link">
+        <b>友情链接：</b>
+        <a href="#" class="active">8477手游网</a><span>|</span>
+        <a href="#">07073游戏网</a><span>|</span>
+        <a href="#">265G游戏网</a><span>|</span>
+        <a href="#">Cwan网页游戏</a><span>|</span>
+        <a href="#">PP助手</a><span>|</span>
+        <a href="#">第一游游戏网</a><span>|</span>
+        <a href="#">九尾狐在线</a>
+    </div>
+</div>
+<div id="mainNav">
+    <div class="fold">
+        <a href="#"></a>
+    </div>
+    <div class="content">
+        <dl>
+            <dt>产品</dt>
+        </dl>
+        <dl>
+            <dt>公司</dt>
+            <dd><a href="#">公司首页</a></dd>
+            <dd><a href="#">公司概况</a></dd>
+            <dd><a href="#">公司动态</a></dd>
+            <dd><a href="#">企业文化</a></dd>
+        </dl>
+        <dl>
+            <dt>联系我们</dt>
+            <dd><a href="#">联系客服</a></dd>
+        </dl>
+        <dl>
+            <dt>其它</dt>
+            <dd><a href="#">招聘信息</a></dd>
+            <dd><a href="#">家长监护</a></dd>
+        </dl>
+    </div>
+</div>
+<footer>
+    掌麟科技2013 © 版权所有
+    <a href="#">豫ICP备13022610号</a>
+</footer>
+</body>
+</html>
