@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-2.2.0.js"></script>
+    <title>测试bootStrup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        img{
+            border: none;
+        }
+        body{
+            background-image: url("images/bg.jpg");
+            font-family: "微软雅黑";
+        }
+        .wrap{
+            min-width: 320px;
+        }
+        #header{
+            padding: 5px;
+            height: 70px;
+        }
+        #header .logo{
+            float: left;
+        }
+        #header .notice{
+            float: right;
+            font-weight: bold;
+            color: #6e4a3b;
+            font-size: 16px;
+        }
+        /*轮播banner*/
+        .swipe{
+            width:100%;
+            overflow:hidden;
+            position:relative;
+        }
+        .swipe ul{
+            -webkit-transition:left 800ms ease-in 0;
+            -moz-transition:left 800ms ease-in 0;
+            -o-transition:left 800ms ease-in 0;
+            -ms-transition:left 800ms ease-in 0;
+            transition:left 800ms ease-in 0;
+        }
+        .swipe #pagenavi{
+            position:absolute;
+            left:0;bottom:5px;
+            text-align:center;
+            width:100%;
+            background:rgba(000, 000, 000, 0.6)
+            !important; filter:Alpha(opacity=60);
+            padding:10px;
+        }
+        .swipe #pagenavi a{
+            width:14px;
+            height:14px;
+            line-height:99em;
+            background:#fff;
+            -webkit-border-radius:50%;
+            -moz-border-radius:50%;
+            border-radius:50%;
+            margin:0 4px;
+            overflow:hidden;
+            cursor:pointer;
+            display:inline-block;
+            *display:inline;
+            *zoom:1;
+            position:relative;
+        }
+        .swipe #pagenavi a.active{
+            background:#ff0;
+            position:relative;
+        }
+
+        #nav{
+            text-align: center;
+            background: url("images/navbg.png") repeat-x left bottom;
+            overflow: hidden;
+            padding-bottom: 3px;
+        }
+        #nav a{
+            display: block;
+            width: 25%;
+            float: left;
+            font-size: 16px;
+            text-decoration: none;
+            color: #fff;
+        }
+        #footer{
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        #footer ul{
+            list-style-type: none;
+        }
+        #footer li{
+            float: left;
+            background-image: url("images/nav.jpg");
+            width: 25%;
+        }
+        #footer li a{
+            display: block;
+            padding: 5px 0;
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            background: url("images/line.jpg") no-repeat right top;
+        }
+        #main{
+            border-radius: 5px;
+            background: rgba(255,255,255,0.5);
+            margin: 10px 10px 70px 10px;
+        }
+        #main .content{
+            padding: 10px;
+            overflow: hidden;
+        }
+        #main .content h3{
+            color: #42ab2b;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #main .content p{
+            text-indent: 2em;
+            font-size: 14px;
+            color: #666;
+            line-height: 30px;
+        }
+        #main .content b{
+            color: #42ab2b;
+        }
+        #main .contactUs,
+        #main .join {
+            display: none;
+        }
+        #main .sale{
+            font-size: 12px;
+        }
+        #main .sale ul{
+            list-style-type: none;
+        }
+        #main .sale a{
+            text-decoration: none;
+            color: #056c00;
+        }
+        #main .sale img{
+            display: block;
+        }
+        #main .sale li{
+            width: 98px;
+            background-color: #c5b79d;
+            text-align: center;
+            float: left;
+            margin: 6px;
+        }
+        #main .sale .title{
+            font-weight: normal;
+            padding: 5px 0;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("#nav .join").click(function(){
+                $("#main .sale").hide();
+                $("#main .contactUs").hide();
+                $("#main .join").show();
+            })
+            $("#nav .sale").click(function(){
+                $("#main .sale").show();
+                $("#main .contactUs").hide();
+                $("#main .join").hide();
+            })
+            $("#nav .contactUs").click(function(){
+                $("#main .sale").hide();
+                $("#main .contactUs").show();
+                $("#main .join").hide();
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <header id="header">
+        <div class="logo"><a href="#"><img src="images/logo.png"></a></div>
+        <div class="notice">
+            营业时间<br>
+            上午：9.00am<br>
+            下午：10.00pm
+        </div>
+    </header>
+    <section class="body_banner">
+        <!--演示内容开始-->
+        <div class="swipe">
+            <ul id="slider">
+                <li style="display:block"><img width="100%" src="images/banner1.jpg"/></li>
+                <li><img width="100%" src="images/banner2.jpg"/></li>
+                <li><img width="100%" src="images/banner3.jpg"/></li>
+                <li><img width="100%" src="images/banner4.jpg"/></li>
+            </ul>
+            <div id="pagenavi">
+                <a href="javascript:void(0);" class="active">1</a>
+                <a href="javascript:void(0);">2</a>
+                <a href="javascript:void(0);">3</a>
+                <a href="javascript:void(0);">4</a>
+            </div>
+        </div>
+        <script type="text/javascript" src="js/touchScroll.js"></script>
+        <script type="text/javascript" src="js/touchslider.dev.js"></script>
+        <script type="text/javascript" src="js/run.js"></script>
+        <!--演示内容结束-->
+    </section>
+    <nav id="nav">
+        <a href="javascript:void(0);" class="sale">
+            <img src="images/nov01.png" alt=""><br>
+            菜品分类
+        </a>
+        <a href="javascript:void(0);" class="join">
+            <img src="images/nov02.png" alt=""><br>
+            招商加盟
+        </a>
+        <a href="javascript:void(0);" class="sale">
+            <img src="images/nov03.png" alt=""><br>
+            团购打折
+        </a>
+        <a href="javascript:void(0);" class="contactUs">
+            <img src="images/nov04.png" alt=""><br>
+            联系我们
+        </a>
+    </nav>
+    <div id="main">
+        <div class="content">
+            <div class="sale">
+                <h3>菜品分类</h3>
+                <ul>
+                    <li><a href="#">
+                        <img src="images/img01.jpg" alt="">
+                        <h4 class="title">夏日南瓜</h4>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/img01.jpg" alt="">
+                        <h4 class="title">夏日南瓜</h4>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/img01.jpg" alt="">
+                        <h4 class="title">夏日南瓜</h4>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/img01.jpg" alt="">
+                        <h4 class="title">夏日南瓜</h4>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/img01.jpg" alt="">
+                        <h4 class="title">夏日南瓜</h4>
+                    </a></li>
+                    <li><a href="#">
+                        <img src="images/img01.jpg" alt="">
+                        <h4 class="title">夏日南瓜</h4>
+                    </a></li>
+                </ul>
+            </div>
+            <div class="contactUs">
+                <h3>关于我们</h3>
+                <p>南宁公司：中国·广西-南宁市-青秀区民族大道63号阳光100-T2栋1305</p>
+                <p>电话：086-771-5617037 5905249 传真： 086-771-5617037</p>
+                <p>24小时热线：(0)18977783284</p>
+                <p>民族星湖北一里-公交车站，车次：6路; 11路; 34路; 39路; 39路纯电动区间车; 79路; 211路; 704路</p>
+            </div>
+            <div class="join">
+                <h3>加入我们</h3>
+                <p>广西南宁智尚网络科技有限公司是一家专注于企业网站建设推广和互联网软件开发的现代化高科技企业。我们精湛的技术主要专注于：网站建设、网站推广、SEO优化、手机网站制作、手机客户端开发、网上商城建设、物流运输系统开发。</p>
+                <p>智尚是一个专业开展网站建设工作的团队，我们善于发掘和发挥每一位成员的专业优势，形成一个高效率的建站团队。正是凭借这支富有创造力的年轻团队，我们创作出了一个有一个备受客户和同行赞赏的佳作，帮助我们的客户创造一个又一个不可估量的价值。</p>
+                <p>为了更好地服务客户，我们成立了市场部、项目部、策划部、技术部、客服部共五个核心部门。团队之间协作互助，以专业和专注的服务为客户提供整合的网站建设和网站推广的解决方案，帮助客户在提升品牌形象的同时提高整体业绩。</p>
+                <p><b>技术优势</b></p>
+                <p>我们拥有自己的专业服务器，服务器有专人维护，使网站安全，性能稳定。公司拥有专业的网站建设技术团队，丰富的行业经验。</p>
+                <p>我们使用的是目前最主流和最先进的技术，前台使用div+Css技术，后台使用php和Java，.NET技术。与sohu、sina、baidu等大型门户网站同步技术，数据库采用 Mysql 的数据库开发。网站打开速度快，网站无垃圾代码，利于搜索引擎抓取，适用于ie6、ie7、ie8、遨游、火狐等各种浏览器，网站有更强的防毒功能。</p>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <ul>
+            <li><a href="#">
+                <img src="images/icon_1.png" alt=""><br>
+                返回首页
+            </a></li>
+            <li><a href="#">
+                <img src="images/icon_4.png" alt=""><br>
+                打电话
+            </a></li>
+            <li><a href="#">
+                <img src="images/icon_5.png" alt=""><br>
+                发短信
+            </a></li>
+            <li><a href="#">
+                <img src="images/icon_3.png" alt=""><br>
+                地图
+            </a></li>
+        </ul>
+    </footer>
+</div>
+</body>
+</html>
