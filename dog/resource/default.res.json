@@ -1,133 +1,89 @@
 {
-	"groups":[{
-			"keys":"checkbox_select_disabled_png,checkbox_select_down_png,checkbox_select_up_png,checkbox_unselect_png,selected_png,border_png,header_png,radiobutton_select_disabled_png,radiobutton_select_down_png,radiobutton_select_up_png,radiobutton_unselect_png,roundthumb_png,thumb_png,track_png,tracklight_png,handle_png,off_png,on_png,button_down_png,button_up_png,thumb_pb_png,track_pb_png,track_sb_png,dog_png,dog_json",
+	"groups":[
+		{
+			"keys":"comp_png",
 			"name":"preload"
-		}],
+		},
+		{
+			"keys":"water_mp3,begin_mp3,hurt_mp3,run_mp3,fail_mp3,smallnum_fnt,win_mp3,dog_png,dog_json,plot_json,boy_jpg,girl_jpg,nzd1_png,share_png",
+			"name":"game"
+		}
+	],
 	"resources":[
 		{
-			"name":"checkbox_select_disabled_png",
-			"type":"image",
-			"url":"assets/CheckBox/checkbox_select_disabled.png"
+			"name":"water_mp3",
+			"type":"sound",
+			"url":"sound/water.mp3"
 		},
 		{
-			"name":"checkbox_select_down_png",
-			"type":"image",
-			"url":"assets/CheckBox/checkbox_select_down.png"
+			"name":"begin_mp3",
+			"type":"sound",
+			"url":"sound/begin.mp3"
 		},
 		{
-			"name":"checkbox_select_up_png",
-			"type":"image",
-			"url":"assets/CheckBox/checkbox_select_up.png"
+			"name":"hurt_mp3",
+			"type":"sound",
+			"url":"sound/hurt.mp3"
 		},
 		{
-			"name":"checkbox_unselect_png",
-			"type":"image",
-			"url":"assets/CheckBox/checkbox_unselect.png"
+			"name":"run_mp3",
+			"type":"sound",
+			"url":"sound/run.mp3"
 		},
 		{
-			"name":"selected_png",
-			"type":"image",
-			"url":"assets/ItemRenderer/selected.png"
+			"name":"fail_mp3",
+			"type":"sound",
+			"url":"sound/fail.mp3"
 		},
 		{
-			"name":"border_png",
-			"type":"image",
-			"url":"assets/Panel/border.png"
+			"name":"smallnum_fnt",
+			"type":"font",
+			"url":"num/smallnum.fnt"
 		},
 		{
-			"name":"header_png",
+			"name":"comp_png",
 			"type":"image",
-			"url":"assets/Panel/header.png"
+			"url":"img/comp.png"
 		},
 		{
-			"name":"radiobutton_select_disabled_png",
-			"type":"image",
-			"url":"assets/RadioButton/radiobutton_select_disabled.png"
-		},
-		{
-			"name":"radiobutton_select_down_png",
-			"type":"image",
-			"url":"assets/RadioButton/radiobutton_select_down.png"
-		},
-		{
-			"name":"radiobutton_select_up_png",
-			"type":"image",
-			"url":"assets/RadioButton/radiobutton_select_up.png"
-		},
-		{
-			"name":"radiobutton_unselect_png",
-			"type":"image",
-			"url":"assets/RadioButton/radiobutton_unselect.png"
-		},
-		{
-			"name":"roundthumb_png",
-			"type":"image",
-			"url":"assets/ScrollBar/roundthumb.png"
-		},
-		{
-			"name":"thumb_png",
-			"type":"image",
-			"url":"assets/Slider/thumb.png"
-		},
-		{
-			"name":"track_png",
-			"type":"image",
-			"url":"assets/Slider/track.png"
-		},
-		{
-			"name":"tracklight_png",
-			"type":"image",
-			"url":"assets/Slider/tracklight.png"
-		},
-		{
-			"name":"handle_png",
-			"type":"image",
-			"url":"assets/ToggleSwitch/handle.png"
-		},
-		{
-			"name":"off_png",
-			"type":"image",
-			"url":"assets/ToggleSwitch/off.png"
-		},
-		{
-			"name":"on_png",
-			"type":"image",
-			"url":"assets/ToggleSwitch/on.png"
-		},
-		{
-			"name":"button_down_png",
-			"type":"image",
-			"url":"assets/Button/button_down.png"
-		},
-		{
-			"name":"button_up_png",
-			"type":"image",
-			"url":"assets/Button/button_up.png"
-		},
-		{
-			"name":"thumb_pb_png",
-			"type":"image",
-			"url":"assets/ProgressBar/thumb_pb.png"
-		},
-		{
-			"name":"track_pb_png",
-			"type":"image",
-			"url":"assets/ProgressBar/track_pb.png"
-		},
-		{
-			"name":"track_sb_png",
-			"type":"image",
-			"url":"assets/ScrollBar/track_sb.png"
-		},
-		{
-			"name":"dog_png",
-			"type":"image",
-			"url":"dog.png"
+			"name":"win_mp3",
+			"type":"sound",
+			"url":"sound/win.mp3"
 		},
 		{
 			"name":"dog_json",
 			"type":"json",
-			"url":"dog.json"
+			"url":"mc/dog.json"
+		},
+		{
+			"name":"dog_png",
+			"type":"image",
+			"url":"mc/dog.png"
+		},
+		{
+			"name":"plot_json",
+			"type":"json",
+			"url":"json/plot.json"
+		},
+		{
+			"name":"boy_jpg",
+			"type":"image",
+			"url":"img/boy.jpg"
+		},
+		{
+			"name":"girl_jpg",
+			"type":"image",
+			"url":"img/girl.jpg"
+		},
+		{
+			"name":"nzd1_png",
+			"type":"image",
+			"url":"img/nzd1.png"
+		},
+		{
+			"name":"share_png",
+			"type":"image",
+			"url":"img/share.png"
 		}
 	]
 }
