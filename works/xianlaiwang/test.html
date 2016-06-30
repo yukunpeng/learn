@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="action/jquery-2.2.0.js"></script>
+    <style type="text/css"></style>
+    <link rel="stylesheet" href="jqmobile/jquery.mobile-1.4.5.min.css">
+    <script src="jqmobile/jquery.mobile-1.4.5.min.js"></script>
+    <script>
+    </script>
+</head>
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>单击链接查看淡入效果。</p>
+        <a href="#pagetwo" data-transition="pop">淡入第二个页面</a>
+    </div>
+
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>点击链接返回上一个页面。<b>注意</b>: fade（淡入）效果是默认的</p>
+        <a href="#pageone">返回第一个页面</a>
+    </div>
+
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+</body>
+</html>

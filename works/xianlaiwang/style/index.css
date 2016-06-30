@@ -1,0 +1,493 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 微软雅黑;
+    color: #5C5B5B;
+}
+img{
+    border: none;
+}
+header .content,#search,#footer2 .content,#nav .mainNav,#banner,#recommend,#floor,#footer1 .content{
+    width: 1200px;
+    margin: 0 auto;
+}
+body{
+    /*background-color: #0099CC;*/
+    /*padding-bottom: 50px;*/
+}
+a{
+    text-decoration: none;
+}
+/******头部导航************/
+header{
+    height: 35px;
+    background-color: #F2F2F2;
+    font-size: 12px;
+    color: #999999;
+}
+header a{
+    color: #999999;
+    text-decoration: none;
+}
+header .red{
+    color: red;
+    margin-right: 5px;
+}
+header .login:hover{
+    color: #ECAFB1;
+}
+header .content{
+    background-color: #F2F2F2;
+}
+header .left,header .right{
+    height: 35px;
+    line-height: 35px;
+}
+header .right{
+    float: right;
+}
+header .phone,header .car{
+    position: relative;
+    padding-right: 3px;
+}
+header .phone{
+    top: 5px;
+}
+header .car{
+    top: 7px;
+}
+header .arrowDown{
+    display: inline-block;
+    width: 12px;
+    height: 15px;
+    background-image: url("../asset/baseicon_06.png");
+    position: relative;
+    top: 7px;
+    left: 3px;
+}
+/*******搜索框部分***********/
+#search{
+    font-size: 12px;
+    overflow: hidden;
+    padding: 15px 0;
+}
+/*左侧logo*/
+#search .logo{
+    display: block;
+    float: left;
+}
+/*右侧购物侧*/
+#search .shopCar{
+    float: right;
+    box-shadow: 0 0 2px 0px #E5E5E5;
+    border: #E5E5E5 1px solid;
+    position: relative;
+    top: 30px;
+    background-image: url("../asset/cart.gif");
+    background-position: 5px;
+    background-repeat: no-repeat;
+    height: 28px;
+    padding: 5px 5px 5px 40px;
+    line-height: 28px;
+    background-color: #F9F9F9;
+}
+#search .shopCar a{
+    text-decoration: none;
+    color: #747474;
+}
+#search a.car:hover{
+    color: #009900;
+}
+#search a.shopNum{
+    display: block;
+    width: 25px;
+    height: 30px;
+    line-height: 25px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    background-image: url("../asset/header_s.png");
+    background-position: 0 -68px;
+    position: absolute;
+    top: -17px;
+    left: 18px;
+}
+/*中间搜索框*/
+#search .content{
+    width: 500px;
+    margin: 0 auto;
+    float: left;
+    padding-top: 16px;
+    overflow: hidden;
+}
+#search_text{
+    border: 3px solid #E12228;
+    height: 35px;
+    width: 400px;
+    padding: 0 5px;
+    float: left;
+    border-right: none;
+}
+#search_btn{
+    background-color: #E12228;
+    border: none;
+    height: 41px;
+    width: 86px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+#search .content p{
+    padding-top: 5px;
+}
+#search .content a{
+    color: #999999;
+    text-decoration: none;
+    padding-right: 5px;
+}
+#search .content a:hover{
+    color: #ECAFB1;
+}
+/**********导航***********/
+#nav{
+    position: relative;
+    border-bottom: 2px solid #3C3C3C;
+}
+#nav .mainNav{
+    height: 35px;
+    position: relative;
+    font-size: 16px;
+}
+#nav .mainNav a{
+    display: block;
+    height: 35px;
+    float: left;
+    padding: 0 20px;
+    line-height: 35px;
+}
+#nav .mainNav a:hover{
+    color: #E12228;
+}
+#nav .mainNav .header{
+    width: 200px;
+    background-color: #E12228;
+    color: white;
+    padding: 0;
+    text-align: center;
+    font-size: 14px;
+}
+#nav .mainNav .header:hover{
+    color: white;
+}
+#nav .mainNav .active{
+    color: #E12228;
+}
+
+#nav .subNav{
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 100;
+    padding-top: 2px;
+    display: none;
+}
+#nav .subNav a{
+    float: none;
+    width: 200px;
+    padding: 0;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    background-color: rgba(0,0,0,.8);
+    color: white;
+    position: relative;
+    font-size: 14px;
+}
+#nav .subNav a:hover{
+    background-color: rgba(255,255,255,.8);
+    color: red;
+}
+#nav .subNav .arrow{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 11px;
+    top: 15px;
+    background: url(../asset/baseicon_06.png) no-repeat -15px 0;
+}
+#nav .tel{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+/*************banner**************/
+#banner{
+    position: relative;
+    height: 413px;
+    overflow: hidden;
+}
+#banner ul{
+    list-style-type: none;
+}
+/*右侧*/
+#banner .right{
+    position: absolute;
+    width: 251px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: rgba(255,255,255,0.9);
+}
+#banner .nav{
+    height: 35px;
+    background-color: #F7F7F7;
+    border-bottom: 1px solid #E8E8E8;
+    font-size: 15px;
+}
+#banner .nav .discountActive{
+    border-right: 1px solid #E8E8E8;
+}
+#banner .nav a{
+    display: block;
+    float: left;
+    height: 36px;
+    width: 125px;
+    line-height: 35px;
+    text-align: center;
+}
+#banner .nav a.active{
+    background-color: white;
+    color: red;
+}
+#banner .discountContent,#banner .shopContent{
+    position: absolute;
+    top: 36px;
+    height: 170px;
+    width: 100%;
+    overflow: hidden;
+}
+#banner .discountContent a,#banner .shopContent a{
+    display: block;
+    font-size: 13px;
+    padding: 10px 0 0 8px;
+    text-decoration: none;
+}
+#banner .discountContent a:hover,#banner .shopContent a:hover{
+    color: #E12228;
+}
+#banner .shopContent{
+    display: none;
+}
+#banner .login{
+    margin-top: 170px;
+    border-top: 1px dashed red;
+    border-bottom: 1px dashed red;
+    text-align: center;
+    padding: 10px 0;
+}
+#banner .right input{
+    width: 90px;
+    background: #D01E23;
+    border: none;
+    color: white;
+    padding: 5px 0;
+    cursor: pointer;
+}
+#banner .right input:hover{
+    background-color: #C80D13;
+}
+/*************recommend************************/
+#recommend{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+#recommend img{
+    width: 239px;
+}
+#recommend li{
+    float: left;
+    margin-right: 1px;
+    overflow: hidden;
+}
+#recommend li:first-child{
+    margin-right: 0;
+}
+/***************floor**********************/
+#floor ul{
+    list-style-type: none;
+}
+#floor a{
+    text-decoration: none;
+}
+#floor .floorItem{
+    overflow: hidden;
+    margin-bottom: 40px;
+    padding-bottom: 3px;
+}
+#floor h1{
+    font-size: 22px;
+    border-bottom: 2px solid #999999;
+    padding-bottom: 5px;
+}
+#floor .left{
+    float: left;
+    position: relative;
+    width: 241px;
+    height: 540px;
+    margin-top: 5px;
+    margin-right: 10px;
+    background-color: red;
+}
+#floor .nav{
+    position: absolute;
+    bottom: 0;
+    width: 236px;
+    height: 100px;
+    padding: 20px 0 0 5px;
+    background-color: rgba(255,255,255,0.8);
+}
+#floor .nav li{
+    float: left;
+}
+#floor .nav a{
+    display: inline-block;
+    width: 114px;
+    text-align: center;
+    padding: 5px 0;
+}
+#floor .nav a:hover{
+    color: #C80D13;
+    box-shadow: 0 0 2px 1px #000;
+}
+#floor .right{
+    float: left;
+    width: 940px;
+}
+#floor .right li{
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    border: 1px solid #999999;
+}
+#floor .right li:hover{
+    box-shadow: 0 0 2px 1px #999;
+}
+#floor .good{
+    display: block;
+    width: 228px;
+    height: 266px;
+    text-align: center;
+}
+#floor .good img{
+    height: 200px;
+}
+#floor .good h2{
+    font-size: 14px;
+    width: 200px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 5px;
+    background-color: #F5F5F5;
+}
+#floor .good .price{
+    width: 200px;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #C80D13;
+    text-align: left;
+}
+/***********页脚*********************/
+#footer1{
+    border-top: solid #CCCCCC 2px;
+    border-bottom: solid #CCCCCC 1px;
+    overflow: hidden;
+    background-color: #ECECEC;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+#footer1 dl{
+    float: left;
+    width: 153px;
+    text-align: center;
+    margin-left: 80px;
+}
+#footer1 dt{
+    padding-left: 10px;
+    border-bottom: 1px dotted #CCCCCC;
+    background-image: url("../asset/footer_bg.png");
+    background-position: -245px -30px;
+    background-repeat: no-repeat;
+    height: 40px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-bottom: 3px;
+}
+#footer1 dd{
+    padding: 10px 0;
+    background-image: url("../asset/footer_bg.png");
+    background-position: -255px 7px;
+    background-repeat: no-repeat;
+}
+#footer1 a{
+    text-decoration: none;
+}
+#footer1 a:hover{
+    text-decoration: underline;
+}
+/***********footer2*********/
+#footer2{
+    overflow: hidden;
+    padding: 10px 0 20px 0;
+    background-color: #ECECEC;
+}
+#footer2 ul{
+    list-style-type: none;
+    text-align: center;
+}
+#footer2 ul li{
+    width: 80px;
+    float: left;
+    margin-left: 50px;
+}
+#footer2 .thum{
+    width: 60px;
+    height: 65px;
+    background-image: url("../asset/footer_bg.png");
+    background-position: -177px 9px;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 7px;
+}
+#footer2 h1{
+    font-size: 16px;
+    margin: 5px 0;
+}
+#footer2 h2{
+    font-size: 12px;
+}
+#footer3{
+    text-align: center;
+    font-size: 12px;
+    background-color: #353535;
+    height: 35px;
+    line-height: 35px;
+}
+#footer3 a{
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+}
+#footer3 a:hover{
+    text-decoration: underline;
+}
+#footer4{
+    text-align: center;
+    font-size: 12px;
+    background-color: #EEEEEE;
+    line-height: 25px;
+    padding: 10px 0 20px 0;
+}
+#footer4 .title{
+    color: #353535;
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+    <style type="text/css" rel="stylesheet">
+        /******全局******/
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        img{
+            border: none;
+        }
+        /************头部**************/
+        #header,#main,#footer{
+            width: 1000px;
+            margin: 30px auto;
+        }
+        /************主要部分**********/
+        #main{
+            overflow: hidden;
+        }
+        #main .leftImg{
+            display: block;
+            float: left;
+            margin-left: 110px;
+        }
+        #main .rightLogin{
+            float: right;
+            border: 1px solid #DEDEDE;
+            width: 250px;
+            list-style-type: none;
+            overflow: hidden;
+            padding: 30px;
+        }
+        #main .rightLogin li{
+            position: relative;
+        }
+        #main .loginNav{
+            list-style-type: none;
+            border-bottom: 1px solid #DEDEDE;
+            height: 30px;
+        }
+        #main .loginNav li{
+            float: left;
+        }
+        #main .loginNav a{
+            display: block;
+            float: left;
+            width: 125px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            height: 20px;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 5px 0;
+        }
+        #main .loginNav a:hover{
+            color: red;
+        }
+        #main .loginNav a.active{
+            color: #0F75BD;
+            border-bottom: solid #0F75BD 2px;
+            position: relative;
+        }
+        #main .userName label,#main .passWord label{
+            display: block;
+            width: 35px;
+            height: 35px;
+            background-color: #CCCCCC;
+            position: absolute;
+            top:1px;
+            left:1px;
+            background-repeat: no-repeat;
+            background-position: 10px 10px;
+        }
+        #main .userName label{
+            background-image: url("asset/tp_03.png");
+        }
+        #main .passWord label{
+            background-image: url("asset/tp_02.png");
+        }
+        #main .userName input,#main .passWord input{
+            display: block;
+            height: 35px;
+            border: 1px solid #DEDEDE;
+            width: 208px;
+            padding-left: 40px;
+            margin: 20px 0;
+        }
+        #main .checkCode{
+            overflow: hidden;
+        }
+        #main .checkCode input{
+            display: block;
+            float: left;
+            width: 135px;
+            height: 35px;
+            border: 1px solid #DEDEDE;
+            padding: 0 5px;
+        }
+        #main .checkCode a{
+            display: block;
+            float: right;
+            position: relative;
+            top: 8px;
+        }
+        #main .loginBtn{
+            width: 250px;
+            height: 31px;
+            background-image: url("asset/btn.png");
+            border: none;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            line-height: 31px;
+            letter-spacing: 10px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        #main .loginBtn:hover{
+            background-position: 0 31px;
+        }
+        #main .remember{
+            font-size: 12px;
+            color: gray;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        #main .remember input,#main .remember label{
+            display: block;
+            float: left;
+            margin-right: 10px;
+        }
+        #main .webNav{
+            clear: both;
+        }
+        #main .webNav ul{
+            list-style-type: none;
+        }
+        #main .webNav li{
+            float: left;
+        }
+        #main .webNav a{
+            display: block;
+            float: left;
+            text-decoration: none;
+            font-size: 12px;
+            color: #2C7BCA;
+            width: 62px;
+            text-align: center;
+        }
+        #main .webNav a:hover{
+            color: red;
+            text-decoration: underline;
+        }
+        /************页脚***********************/
+        #footer{
+            text-align: center;
+            font-size: 12px;
+            color: gray;
+        }
+        /*js调用*/
+        .wrongBg{
+            background-color: #FFE7E7;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            document.getElementById("userName").onblur=function(){
+                if(this.value==undefined||this.value==""){
+                    addClass(this,"wrongBg");
+                    this.setAttribute("placeholder","用户名不许为空");
+                }else{
+                    removeClass(this,"wrongBg");
+                }
+            }
+            document.getElementById("passWord").onblur=function(){
+                if(this.value==undefined||this.value==""){
+                    addClass(this,"wrongBg");
+                    this.setAttribute("placeholder","密码不许为空");
+                } else{
+                    removeClass(this,"wrongBg");
+                }
+            }
+        }
+        //添加类
+        function addClass(node,className){
+            if(node.className.indexOf(className)==-1){
+                node.className+=" "+className;
+            }
+        }
+        //删除类
+        function removeClass(node,className){
+            if(node.className.indexOf(className)!=-1){
+                node.className=node.className.replace(className,"");
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="header">
+    <a href="#"><img src="asset/logo.png" alt="logo"/></a>
+</div>
+<div id="main">
+    <img src="asset/tp_01.png" alt="" class="leftImg"/>
+    <ul class="rightLogin">
+        <li>
+            <ul class="loginNav">
+                <li><a href="#" class="active">经销商登录</a></li>
+                <li><a href="#">厂商登录</a></li>
+            </ul>
+        </li>
+        <li class="userName">
+            <label for="userName" title="用户名"></label>
+            <input type="text" id="userName" placeholder="请输入用户名">
+        </li>
+        <li class="passWord">
+            <label for="passWord" title="密码"></label>
+            <input type="text" id="passWord" placeholder="请输入密码">
+        </li>
+        <li class="checkCode">
+            <input type="text">
+            <a href="#"><img src="asset/checkCode.jpg"></a>
+        </li>
+        <li class="loginBtn">登录</li>
+        <li class="remember">
+            <input type="checkbox" id="remember"/>
+            <label for="remember">记住用户名</label>
+        </li>
+        <li class="webNav">
+            <ul>
+                <li><a href="index.html">回到首页</a></li>
+                <li><a href="register.html">免费注册</a></li>
+                <li><a href="#">忘记密码</a></li>
+                <li><a href="#">审核查询</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div id="footer">
+    Copyright (C) 2015-2020 all Rights Reserved 豫ICP备14024464号-1
+    技术支持 by 郑州鲜来信息技术服务有限公司<br/><br/>
+    <img src="asset/tp_05.png">
+    <img src="asset/tp_06.png">
+</div>
+</body>
+</html>

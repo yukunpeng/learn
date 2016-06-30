@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <style rel="stylesheet" type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            border: none;
+        }
+        body{
+            background-color: #F6F6F6;
+            font-size: 14px;
+        }
+        /*头部*/
+        header{
+            font-size: 12px;
+            overflow: hidden;
+            background-color: #F2F2F2;
+            border-bottom: 1px solid #E5E5E5;
+        }
+        header .content, #banner .content,footer{
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        header .left{
+            float: left;
+            height: 30px;
+            line-height: 30px;
+        }
+        header .left a{
+            text-decoration: none;
+            color: red;
+        }
+        header .right{
+            float: right;
+            height: 30px;
+            line-height: 30px;
+        }
+        header .right img{
+            position: relative;
+            top: 5px;
+        }
+        header .right a{
+            text-decoration: none;
+            color: black;
+        }
+        header .right a:hover{
+            text-decoration: underline;
+            color: red;
+        }
+        /*banner*/
+        #banner{
+            padding: 10px 0;
+            border-bottom: 4px solid #ED1C24;
+            background-color: white;
+        }
+        #banner img{
+            display: block;
+        }
+        #banner .tip_02{
+            float: right;
+            position: relative;
+            top: 5px;
+        }
+        /*main*/
+        #main{
+            border: 1px solid #E2E2E2;
+            background-color: white;
+            margin:20px auto;
+            width: 998px;
+        }
+        #main .title{
+            border-bottom: 1px solid #E2E2E2;
+        }
+        #main .title .right{
+            float: right;
+            height: 65px;
+            line-height: 65px;
+            margin-right: 50px;
+            color: #999999;
+        }
+        #main .title .right a{
+            color: #7D6F7D;
+            text-decoration: none;
+        }
+        #main .title .right a:hover{
+            color: red;
+        }
+        #main .title h1{
+            font-size: 14px;
+            height: 65px;
+            line-height: 65px;
+            margin-left: 50px;
+        }
+        #main .title h1 a{
+            color: red;
+            text-decoration: none;
+        }
+        #main .list{
+            list-style-type: none;
+        }
+        #main .list li{
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        #main .list .left,#main .list .right{
+            line-height: 35px;
+        }
+        #main .list .left{
+            height: 35px;
+            float: left;
+            text-align: right;
+            width: 280px;
+            margin-right: 12px;
+        }
+        #main .list .right{
+            float: left;
+            overflow: hidden;
+        }
+        #main .list .red{
+            color: red;
+        }
+        #main .list .right .txt{
+            height: 33px;
+            border: 1px solid #C6C6C6;
+            width: 250px;
+            padding: 0 5px;
+        }
+        #main .list .right .list{
+            width: 450px;
+            overflow: hidden;
+        }
+        #main .list .right .list li{
+            float: left;
+            margin: 2px 0;
+            width: 110px;
+        }
+        #main .agreement a{
+            text-decoration: none;
+            color: #0099CC;
+        }
+        #main .regBtn{
+            padding: 2px 20px;
+            background-color: #FF6600;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        /*footer*/
+        footer{
+            text-align: center;
+            margin-bottom: 40px;
+            margin-top: 30px;
+            color: #9B9B9B;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="content">
+        <div class="left">
+            <a href="login.html">登录</a>
+            <a href="#">免费注册</a>
+        </div>
+        <div class="right">
+            <a href="#">个人中心</a>
+            <a href="#">手机APP</a>
+            <a href="#">买冻品</a>
+            <a href="#">卖冻品</a>
+            <a href="#">服务中心</a>
+            <a href="#"><img src="asset/QQ.png" alt=""/></a>
+        </div>
+    </div>
+</header>
+<div id="banner">
+    <div class="content">
+        <img src="asset/tip_02.jpg" alt="" class="tip_02">
+        <a href="#"><img src="asset/logo.png" alt="" class="logo"></a>
+    </div>
+</div>
+<div id="main">
+    <div class="title">
+        <div class="right">已有帐号，<a href="login.html">立即登录</a></div>
+        <h1><a href="#">经销商注册</a></h1>
+    </div>
+    <ul class="list">
+        <li>
+            <div class="left">类别:</div>
+            <div class="right">
+                <input type="radio" name="ra" id="personal">
+                <label for="personal">个体工商</label>
+                <input type="radio" name="ra" id="company">
+                <label for="company">企业</label>
+            </div>
+        </li>
+        <li>
+            <div class="left"><span class="red">*</span> 客户名称:</div>
+            <div class="right">
+                <input type="text" class="txt">
+            </div>
+        </li>
+        <li>
+            <div class="left"><span class="red">*</span> 联系人:</div>
+            <div class="right">
+                <input type="text" class="txt">
+            </div>
+        </li>
+        <li>
+            <div class="left"><span class="red">*</span> 联系电话:</div>
+            <div class="right">
+                <input type="text" class="txt">
+            </div>
+        </li>
+        <li>
+            <div class="left">QQ:</div>
+            <div class="right">
+                <input type="text" class="txt">
+            </div>
+        </li>
+        <li>
+            <div class="left"><span class="red">*</span> 邮箱:</div>
+            <div class="right">
+                <input type="text" class="txt">
+            </div>
+        </li>
+        <li>
+            <div class="left"><span class="red">*</span> 经营产品:</div>
+            <div class="right">
+                <ul class="list">
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                    <li><input type="checkbox"> <label>海产类</label></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="left"><span class="red">*</span> 现有渠道:</div>
+            <div class="right">
+                <ul class="list">
+                    <li><input type="checkbox"> <label>商超</label></li>
+                    <li><input type="checkbox"> <label>商超</label></li>
+                    <li><input type="checkbox"> <label>商超</label></li>
+                    <li><input type="checkbox"> <label>商超</label></li>
+                    <li><input type="checkbox"> <label>商超</label></li>
+                    <li><input type="checkbox"> <label>商超</label></li>
+                    <li><input type="checkbox"> <label>商超</label></li>
+                    <li><input type="checkbox"> <label>商超</label></li>
+                    <li><input type="checkbox"> <label>商超</label></li>
+                    <li><input type="checkbox"> <label>商超</label></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="left"><span class="red">*</span> 验证码:</div>
+            <div class="right">
+                <input type="text" class="txt">
+                <input type="button" value="获取短信验证码"/>
+            </div>
+        </li>
+        <li class="agreement">
+            <div class="left"></div>
+            <div class="right">
+                <input type="checkbox">
+                我已阅读并同意<a href="#">《鲜来网注册协议》</a>
+            </div>
+        </li>
+        <li>
+            <div class="left"></div>
+            <div class="right">
+                <div class="regBtn">立即注册</div>
+            </div>
+        </li>
+    </ul>
+</div>
+<footer>
+    Copyright (C) 2015-2020 all Rights Reserved 豫ICP备14024464号-1 技术支持 by 郑州鲜来信息技术服务有限公司
+</footer>
+</body>
+</html>
