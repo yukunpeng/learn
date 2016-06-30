@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打砖块</title>
+    <script src="active/HomePage.js"></script>
+    <script src="active/GamePage.js"></script>
+    <script src="active/FailPage.js"></script>
+    <script src="active/WinPage.js"></script>
+    <script src="active/Tools.js"></script>
+    <script src="active/jquery-2.2.0.js"></script>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .btn{
+            padding: 5px 10px;
+        }
+        #container{
+            position: absolute;
+            width: 500px;
+            height: 400px;
+            left: 50%;
+            top: 50%;
+            margin-left: -250px;
+            margin-top: -200px;
+            background-color: greenyellow;
+            overflow: hidden;
+        }
+        /*公共设置*/
+        #homePage,#gamePage{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        /*主页面*/
+        #homePage{
+            /*display: none;*/
+        }
+        #homePage h1{
+            margin: 50px 0;
+        }
+        #homePage input{
+            margin-top: 100px;
+        }
+        /*游戏页面*/
+        #gamePage{
+            display: none;
+        }
+        #gamePage .scoreLabel{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+        #gamePage .blockContainer{
+            position: relative;
+            top: 50px;
+            left: 28px;
+        }
+        #gamePage .blockContainer li{
+            position: absolute;
+            width: 40px;
+            height: 10px;
+            background-color: red;
+        }
+        #gamePage .ball{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: blue;
+            position: absolute;
+            bottom: 31px;
+            left: 245px;
+        }
+        #gamePage .board{
+            width: 100px;
+            height: 10px;
+            background-color: black;
+            position: absolute;
+            bottom: 20px;
+            left: 200px;
+        }
+        /*胜利*/
+        #winPage,#failPage{
+            display: none;
+            text-align: center;
+        }
+        #winPage .msg,#failPage .msg{
+            margin: 100px 0 50px 0;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="homePage">
+        <h1>打砖块</h1>
+        <p>---w---向左---<br>---d---向右---</p>
+        <input type="button" value="开始游戏" class="btn">
+    </div>
+    <div id="gamePage">
+        <label class="scoreLabel">得分：20</label>
+        <ul class="blockContainer"></ul>
+        <div class="ball"></div>
+        <div class="board"></div>
+    </div>
+    <div id="winPage">
+        <h1 class="msg">胜利</h1>
+        <label class="scoreLabel">得分：20</label><br/><br/><br/>
+        <input type="button" value="再战" class="reWar btn">
+        <input type="button" value="返回" class="goHome btn">
+
+    </div>
+    <div id="failPage">
+        <h1 class="msg">失败</h1>
+        <label class="scoreLabel">得分：20</label><br/><br/><br/>
+        <input type="button" value="再战" class="reWar btn">
+        <input type="button" value="返回" class="goHome btn">
+    </div>
+</div>
+<script>
+    $(function(){
+        homePage.init();
+        gamePage.init();
+        failPage.init();
+        winPage.init();
+    })
+</script>
+</body>
+</html>
