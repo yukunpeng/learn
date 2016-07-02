@@ -7,8 +7,10 @@
 	
 	
 	public class Main extends MovieClip {
-		private var toWhere:String;
+		private var toPos:int;
 		private var moveTime:Number=0.5;
+		private var isMove:Boolean;
+		
 		
 		private var blockDataArr:Array=[
 									2,2,2,2,2,2,2,2,2,2,
@@ -26,9 +28,6 @@
 			
 			
 			// constructor code
-			this.addEventListener(MouseEvent.MOUSE_DOWN,onDown);
-			this.addEventListener(MouseEvent.MOUSE_UP,onUp);
-			
 			for(var i:int=0;i<blockDataArr.length;i++){
 				var block:Block=new Block();
 				block.x=block.width*(i%10)+100;
@@ -45,51 +44,54 @@
 			hero.x=this.blockArr[hero.pos].x+this.blockArr[hero.pos].width/2;
 			hero.y=this.blockArr[hero.pos].y+this.blockArr[hero.pos].height/2;
 			addChild(hero);
+			this.addEventListener(MouseEvent.MOUSE_DOWN,onDown);
+			this.addEventListener(MouseEvent.MOUSE_UP,onUp);
 		}
-		
-		
 		
 		private function onDown(e:MouseEvent):void{
-
 			switch(e.target){
 				case this["upBtn"]:
-					this.toWhere="up";
-					go();
+					this.toPos-=10;
+					tweenOver();
 					break;
 				case this["downBtn"]:
-					this.toWhere="down";
-					go();
+					this.toPos+=10;
+					tweenOver();
 					break;
 				case this["leftBtn"]:
-					this.toWhere="left";
-					go();
+					this.toPos-=1;
+					tweenOver();
 					break;
 				case this["rightBtn"]:
-					this.toWhere="right";
-					go();
+					this.toPos+=1;
+					tweenOver();
 					break;
 			}
-			go();
 		}
 		private function onUp(e:MouseEvent):void{
-			this.toWhere="no";
+			this.toPos=-1;
 		}
 		
 		private function go():void{
-			var goalPos:int;
-			switch(this.toWhere){
-				case "up":
-					=this.hero.pos-10;
-					break;
-			}
-			if(goalPos<0)
-					tweenObj={
-						 y:this["hero"].y-25,
-						 onComplete:go,
+			//开始移动
+			this.isMove=true;
+			TweenLite.to(this.hero, moveTime,{
+						 x:this.blockArr[this.toPos].x+this.blockArr[this.toPos].width/2,
+						 y:this.blockArr[this.toPos].y+this.blockArr[this.toPos].height/2,
+						 onComplete:tweenOver,
 						 ease:Linear.easeNone
-						 }
-			TweenLite.to(this.hero, moveTime,tweenObj);
+						 });
 		}
+		
+		private function tweenOver():void{
+			//结束移动
+			this.isMove=false;
+			if(toPos<0||toPos>=this.blockArr.length){
+				return;
+			}
+			go();
+		}
+		
 	}
 	
 }
