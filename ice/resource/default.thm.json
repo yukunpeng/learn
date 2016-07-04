@@ -1,0 +1,15 @@
+{
+  "autoGenerateExmlsList": true,
+  "exmls": [
+    "src/skins/ArrawUPSkin.exml",
+    "src/skins/Page1Skin.exml",
+    "src/skins/Page2Skin.exml",
+    "src/skins/Page3Skin.exml",
+    "src/skins/Page4Skin.exml",
+    "src/skins/ProgressSkin.exml",
+    "src/skins/Page5Skin.exml",
+    "src/skins/Page6Skin.exml",
+    "src/skins/PageShareSkin.exml"
+  ],
+  "skins": {}
+}

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="Page3Skin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image left="0" right="0" id="img_0" top="0" bottom="0" x="10" y="10" source="p3_1_png"/>
+	<e:Image id="img_1" source="p3_1_jpg" left="0" right="0" top="0" bottom="0"/>
+	<e:Group id="gp_fish" left="0" right="0" top="0" bottom="0">
+		<e:Image source="fish1_png" x="55" y="539"/>
+		<e:Image y="464" source="fish1_png" x="65"/>
+		<e:Image source="fish2_png" x="27" y="640"/>
+		<e:Image y="503" source="fish2_png" x="37"/>
+		<e:Image source="fish3_png" x="-36" y="588"/>
+		<e:Image y="378.5" source="fish3_png" x="-26"/>
+		
+	</e:Group>
+	<e:Image id="img_point0" y="500" x="196" source="p2_8_png" visible="false"/>
+	<e:Image id="img_1_1" source="p3_14_png" left="0" right="0" top="0" bottom="0" alpha="0.5"/>
+	<e:Image id="img_2" source="p3_10_jpg" left="0" right="0" top="0" bottom="0"/>
+	<e:Image id="img_3" source="p3_11_1_png"/>
+	<e:Image id="img_4" source="p3_11_2_png" x="295"/>
+	<e:Image id="img_5" source="p3_2_png" horizontalCenter="0" y="560"/>
+	<e:Image id="img_7" source="p3_0_png" left="0" right="0" top="0" bottom="0"/>
+	<e:Image id="img_8" source="p3_4_png" x="155" y="101"/>
+	<e:Image id="img_6" source="p3_3_png" x="218" y="190"/>
+	<e:Image id="img_9" source="p3_5_png" y="610" horizontalCenter="0.5"/>
+	<e:Image id="img_9_0" source="p2_2_0_png" y="561" horizontalCenter="0"/>
+	<e:Image id="img_10" left="0" right="0" top="0" bottom="0" source="p2_1_png"/>
+	<e:Image id="img_11" source="p3_9_png" horizontalCenter="0.5" verticalCenter="-98"/>
+	<e:Image id="img_12" source="p3_6_png" x="132" y="347"/>
+	<e:Image id="img_13" source="p3_7_png" x="162" y="89"/>
+	<e:Image id="img_point" source="point2_png" x="238" y="213"/>
+	<e:Image id="img_14" source="p2_7_png" x="62" y="598"/>
+</e:Skin>

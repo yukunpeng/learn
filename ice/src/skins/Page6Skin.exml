@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="Page6Skin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="p5_1_jpg" left="0" right="0" top="0" bottom="0" locked="true"/>
+	<e:Group id="gp_point" width="147" height="282" x="65" y="100">
+		<e:Image x="12" y="13" source="p5_2_png"/>
+		<e:Image source="p5_4_png" x="54" y="129" width="41" height="41"/>
+		<e:Image source="p5_5_png" x="53" y="176" width="41" height="41"/>
+	</e:Group>
+	<e:Group y="722" id="group_arraw" horizontalCenter="0" visible="false">
+		<e:Image width="35" source="arraw2_png" height="25"/>
+		<e:Image width="35" source="arraw2_png" height="25"/>
+		<e:Image width="35" source="arraw2_png" height="25"/>
+		<e:layout>
+			<e:VerticalLayout gap="-15"/>
+		</e:layout>
+	</e:Group>
+	<e:Group id="gp_1" width="480" height="800" visible="false">
+		<e:Image source="p5_7_png" left="0" right="0" top="0" bottom="0"/>
+		<e:Image id="img_text" source="p5_8_0_png" x="44" y="87"/>
+		<e:Image id="img_hand" source="p5_6_png" x="128" y="151"/>
+	</e:Group>
+	<e:Group id="gp_2" left="0" right="0" top="0" bottom="0" visible="false">
+		<e:Image source="p5_12_png" left="0" right="0" top="0" bottom="0"/>
+		<e:Image source="p5_13_png"/>
+		<e:Image source="p5_14_png"/>
+	</e:Group>
+	<e:Group id="gp_3" left="0" right="0" top="0" bottom="0" visible="false">
+		<e:Image source="p5_15_jpg" left="0" right="0" top="0" bottom="0"/>
+		<e:Image source="p5_16_png" x="66" y="256" alpha="1"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="Page3Skin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="gp_items">
+		<e:Group width="480" height="800" x="0" y="0">
+			<e:Image source="p6_11_png" left="0" right="0" top="0" bottom="0"/>
+			<e:Image source="p6_32_png" y="34" horizontalCenter="0"/>
+			<e:Image source="p6_33_png" y="622" horizontalCenter="0"/>
+		</e:Group>
+		<e:Group width="480" height="800" x="0" y="0">
+			<e:Image left="0" right="0" top="0" bottom="0" source="p6_41_png"/>
+			<e:Image horizontalCenter="0" bottom="0" source="p6_42_png"/>
+			<e:Image source="p6_43_png" y="578" horizontalCenter="0"/>
+		</e:Group>
+		
+	
+	<e:Group width="480" height="800" x="0" y="0">
+		<e:Image source="p6_11_png" left="0" right="0" top="0" bottom="0"/>
+		<e:Image source="p6_22_png" y="34" horizontalCenter="0"/>
+		<e:Image source="p6_23_png" y="622" horizontalCenter="0"/>
+	</e:Group>
+		<e:Group width="480" height="800" x="0" y="0">
+			<e:Image source="p2_1_png" left="0" right="0" top="0" bottom="0"/>
+			<e:Image source="p6_12_png" y="34" horizontalCenter="0"/>
+			<e:Image source="p6_13_png" y="622" horizontalCenter="0"/>
+		</e:Group>
+		<e:layout>
+			<e:HorizontalLayout gap="0"/>
+		</e:layout>
+	</e:Group>
+	<e:Image id="btn_right" source="arraw1_png" x="427" y="315"/>
+	<e:Group id="group_arraw" x="217" y="742">
+		<e:Image source="arraw2_png" width="35" height="25"/>
+		<e:Image source="arraw2_png" width="35" height="25"/><e:Image source="arraw2_png" width="35" height="25"/>
+		<e:layout>
+			<e:VerticalLayout gap="-15"/>
+		</e:layout>
+	</e:Group>
+	
+	<e:Image id="btn_left" source="arraw3_png" x="0" y="315" visible="false"/>
+</e:Skin>	

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="PageShareSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="ps_0_png" left="0" right="0" top="0" bottom="0"/>
+	<e:Group id="gp_items" y="138" horizontalCenter="0">
+		<e:Image source="ps_4_png"  horizontalCenter="0"/>
+		<e:Image source="ps_5_png" y="40" horizontalCenter="0"/>
+		<e:Image source="ps_6_png" y="80" horizontalCenter="0"/>
+		<e:Image source="ps_7_png" y="120" horizontalCenter="0"/>
+		<e:Image y="200" source="ps_8_png" horizontalCenter="0"/>
+		<e:Image y="240" source="ps_9_png" horizontalCenter="-17.5"/>
+		<e:Image source="ps_10_png" y="300" horizontalCenter="0"/>
+		<e:Image id="btn_share" source="ps_3_png" y="382" horizontalCenter="0"/>
+		<e:Image id="btn_more" source="ps_2_png" y="470" horizontalCenter="0"/>
+	</e:Group>
+	<e:Group id="gp_share" left="0" right="0" top="0" bottom="0" visible="false">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0.8"/>
+		<e:Image source="ps_1_png" x="293" y="54"/>
+	</e:Group>
+</e:Skin>
