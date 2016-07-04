@@ -90,7 +90,7 @@ var Page6 = (function (_super) {
         egret.Tween.get(this.gp_1)
             .to({ "alpha": 1, "scaleX": 1, "scaleY": 1, "x": 0, "y": 0 }, 1000)
             .call(this.ontouch3, this)
-            .wait(12000).to({ "alpha": 0 }, 1000).call(this.hideAll, this);
+            .wait(9000).to({ "alpha": 0 }, 1000).call(this.hideAll, this);
         this.img_hand.alpha = 0;
         this.img_hand.x = 400;
     };
@@ -107,38 +107,19 @@ var Page6 = (function (_super) {
         egret.Tween.get(this.img_hand)
             .to({ "alpha": 1, "x": 128, "y": 151, }, 1000)
             .call(this.huangdong, this)
-            .to({ "x": 128, "y": 151 }, 1000)
-            .to({ "x": 68, "y": 253 }, 500)
-            .call(this.huangdong, this)
-            .to({ "x": 156, "y": 307 }, 1000)
-            .to({ "x": 192, "y": 247 }, 500)
-            .call(this.huangdong, this)
+            .wait(1000)
             .to({ "x": 282, "y": 323 }, 1000)
-            .to({ "x": 207, "y": 247 }, 500)
+            .to({ "x": 128, "y": 247 }, 500)
             .call(this.huangdong, this)
-            .to({ "x": 392, "y": 319 }, 1000)
-            .to({ "x": 70, "y": 382 }, 500)
-            .call(this.huangdong, this)
-            .to({ "x": 165, "y": 467 }, 1000)
-            .to({ "x": 187, "y": 372 }, 500)
-            .call(this.huangdong, this)
-            .to({ "x": 263, "y": 460 }, 1000)
-            .to({ "x": 342, "y": 383 }, 500)
+            .to({ "x": 282, "y": 460 }, 1000)
+            .to({ "x": 128, "y": 383 }, 500)
             .call(this.huangdong, this)
             .to({ "x": 339, "y": 450 }, 1000);
         egret.Tween.get(this.img_text)
             .wait(2000)
             .set({ "source": RES.getRes("p5_8_0_png") })
             .wait(1500)
-            .set({ "source": RES.getRes("p5_8_1_png") })
-            .wait(1500)
-            .set({ "source": RES.getRes("p5_8_2_png") })
-            .wait(1500)
             .set({ "source": RES.getRes("p5_8_3_png") })
-            .wait(1500)
-            .set({ "source": RES.getRes("p5_8_4_png") })
-            .wait(1500)
-            .set({ "source": RES.getRes("p5_8_5_png") })
             .wait(1500)
             .set({ "source": RES.getRes("p5_8_6_png") });
     };

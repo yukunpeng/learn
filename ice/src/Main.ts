@@ -129,7 +129,7 @@ class Main extends eui.UILayer {
      */
     protected startCreateScene(): void {
         this.addChild(new Page2());
-        //this.addChild(new Page5());
+        //this.addChild(new Page6());
         
         Sound.getInstance();
     }

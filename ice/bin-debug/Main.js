@@ -127,7 +127,7 @@ var Main = (function (_super) {
      */
     p.startCreateScene = function () {
         this.addChild(new Page2());
-        //this.addChild(new Page5());
+        //this.addChild(new Page6());
         Sound.getInstance();
     };
     return Main;
