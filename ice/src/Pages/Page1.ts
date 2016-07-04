@@ -27,8 +27,14 @@ class Page1 extends BasePage {
         }
         egret.Tween.get(this.img_1).to({"alpha":1},2000);
         //egret.Tween.get(this.img_2).wait(2000).to({ "alpha": 1 },2000);
-        egret.Tween.get(this.img_3).wait(2000).to({ "alpha": 1 },2000).to({ "scaleX": 1.3,"scaleY": 1.3 },2000).to({ "alpha": 0 },2000);
-        //egret.Tween.get(this.img_4).wait(6000).to({ "alpha": 1 },2000).to({ "alpha": 0 },2000);
+        //this.img_3.anchorOffsetX = this.img_3.width / 2;
+        //this.img_3.anchorOffsetY = this.img_3.height; 
+        //this.img_3.anchorOffsetX = 0.5;
+        //this.img_3.anchorOffsetY = 0.5; 
+        //this.img_3.x = this.img_3.x+this.img_3.width / 2;
+        //this.img_3.y = this.img_3.y+this.img_3.height;
+        egret.Tween.get(this.img_3).wait(2000).to({ "alpha": 1 },2000).to({ "alpha": 0 },2000);
+        egret.Tween.get(this.img_4).wait(4000).to({ "alpha": 1 },2000).to({ "alpha": 0 },2000);
         egret.Tween.get(this.img_5).wait(6000).to({ "alpha": 1 },2000).call(this.onclick_touch0,this);
         
         

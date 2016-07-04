@@ -20,9 +20,9 @@
 			<e:HorizontalLayout gap="1"/>
 		</e:layout>
 	</e:Group>
-	<e:Image id="img_3" source="p1_4_png" y="412" x="240" anchorOffsetX="240" anchorOffsetY="300"/>
-	<e:Image id="img_4" source="p1_5_png" y="425" x="240" anchorOffsetX="240" anchorOffsetY="300"/>
-	<e:Image id="img_5" source="p1_6_png" width="480" height="311" y="433" x="240" anchorOffsetX="240" anchorOffsetY="300"/>
+	<e:Image id="img_3" source="p1_4_png" y="580" x="395" anchorOffsetX="240" anchorOffsetY="300"/>
+	<e:Image id="img_4" source="p1_5_png" y="510" x="343" anchorOffsetX="240" anchorOffsetY="300"/>
+	<e:Image id="img_5" source="p1_6_png" width="347" height="295" y="441" x="307" anchorOffsetX="240" anchorOffsetY="300"/>
 	<e:Image id="jesus_3" source="jesus_3_png" x="0" y="0"/>
 	<e:Image y="194.5" id="img_point0" source="point2_png" x="324"/>
 	<e:Group id="group1" left="0" right="0" top="0" bottom="0">
