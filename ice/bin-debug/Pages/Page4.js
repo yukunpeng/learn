@@ -138,7 +138,7 @@ var Page4 = (function (_super) {
         this.removeAndAdd_Up(new Page5());
     };
     p.onclick_page_up = function () {
-        this.removeAndAdd_Dwon(new Page3());
+        this.removeAndAdd_Dwon(new Page1());
     };
     return Page4;
 }(BasePage));

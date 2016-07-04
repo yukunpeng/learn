@@ -163,6 +163,6 @@ class Page4 extends BasePage {
         this.removeAndAdd_Up(new Page5());
     }
     protected onclick_page_up() {
-        this.removeAndAdd_Dwon(new Page3());
+        this.removeAndAdd_Dwon(new Page1());
     }
 }

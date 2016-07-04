@@ -86,8 +86,8 @@ var Page3 = (function (_super) {
         }
         this.group_arraw.visible = true;
         this.currentsel += 1;
-        if (this.currentsel >= 6) {
-            this.currentsel = 5;
+        if (this.currentsel >= 5) {
+            this.currentsel = 4;
             return;
         }
         this.chengeItems();

@@ -89,8 +89,8 @@ class Page3 extends BasePage {
         }
         this.group_arraw.visible=true;
         this.currentsel += 1;
-        if(this.currentsel >= 6) {
-            this.currentsel = 5;
+        if(this.currentsel >= 5) {
+            this.currentsel = 4;
             return;
         }
         this.chengeItems();
