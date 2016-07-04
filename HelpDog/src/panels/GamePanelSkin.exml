@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="GamePanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Rect fillColor="0xA80000" left="0" top="0" bottom="0" right="0" y="20" x="20"/>
+	<e:Image id="thum" source="boy_jpg" x="9" y="674" width="110" height="112"/>
+	<e:Label text="厌食汪" x="374" y="74"/>
+	<e:Label id="countTf" y="752" text="30" x="136"/>
+	<e:Label y="222" text="生病汪" x="372"/>
+	<e:Label y="380" text="掉毛汪" x="376"/>
+	<e:Image id="food" source="nzd1_png" x="236" y="704"/>
+</e:Skin>

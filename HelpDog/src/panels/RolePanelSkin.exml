@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="RolePanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect right="0" left="0" top="0" bottom="0" y="20" fillColor="0xA80000" x="20"/>
+	<e:Label y="82" height="72" text="选择角色" textAlign="center" width="436" size="53" x="34"/>
+	<e:Label id="descTf" y="510" text="标签" x="18" width="436" height="96"/>
+	<e:Label id="boyTf" y="352" text="男" x="40" width="148" height="42" textAlign="center"/>
+	<e:Label id="okBtn" x="262" y="712" text="选择" textAlign="center" width="148" height="42"/>
+	<e:Label id="girlTf" y="354" text="女" x="248" width="148" height="42" textAlign="center"/>
+	<e:Rect id="rect" height="8" width="124" x="54" y="424"/>
+</e:Skin>
