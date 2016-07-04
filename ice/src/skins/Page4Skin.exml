@@ -24,7 +24,7 @@
 		
 		
 	</e:Group>
-	<e:Group id="group4">
+	<e:Group id="group4" visible="false">
 		<e:Image source="p2_1_png" left="0" right="0" top="0" bottom="0"/>
 		<e:Image source="p2_1_1_png" x="114" y="38.5"/>
 		<e:Image id="img_text" source="notime_png" y="603" x="72"/>
