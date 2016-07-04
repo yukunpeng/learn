@@ -63,6 +63,7 @@ var Page5 = (function (_super) {
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.ontouch4, this);
         egret.Tween.removeTweens(this.img_left);
         egret.Tween.removeTweens(this.img_right);
+        this.arraw_down.visible = false;
         this.gp_player.visible = true;
         this.gp_player.alpha = 0;
         this.img_text.alpha = 0;
@@ -84,7 +85,6 @@ var Page5 = (function (_super) {
     };
     p.onclick_page_down = function () {
         if (this.arraw_down.visible == false) {
-            return;
         }
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.ontouch5, this);
         Sound.getInstance().PlayBGM();

@@ -33,11 +33,13 @@ class Page2 extends BasePage {
         this.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onclick_1,this);
         //this.addArrawUP();
         this.addArrawDOWN();
+        this.arraw_down.visible=false;
         this.img_point.alpha = 1;
         egret.Tween.get(this.img_point,{ "loop": true }).to({ "alpha": 1 },500).wait(500).to({ "alpha": 0.5 },1500);
     }
     private onclick_1() {
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.onclick_1,this);
+        this.arraw_down.visible = true;
         egret.Tween.get(this.img_2).to({ "alpha": 0 },1000);
         egret.Tween.get(this.img_1_1).to({ "alpha": 0.3 },1000);
         egret.Tween.get(this.img_3).to({ "alpha": 1 },1000)

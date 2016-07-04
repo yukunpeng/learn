@@ -44,7 +44,9 @@ var BasePage = (function (_super) {
         if (this.arraw_down != null) {
             this.arraw_down.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onclick_page_down, this);
         }
-        this.parent.removeChild(this);
+        if (this.parent && this) {
+            this.parent.removeChild(this);
+        }
     };
     p.addArrawUP = function () {
         this.arraw_up = new ArrawUP();

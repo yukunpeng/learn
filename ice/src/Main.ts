@@ -128,8 +128,8 @@ class Main extends eui.UILayer {
      * Create scene interface
      */
     protected startCreateScene(): void {
-        //this.addChild(new Page2());
-        this.addChild(new Page1());
+        this.addChild(new Page2());
+        //this.addChild(new Page5());
         
         Sound.getInstance();
     }

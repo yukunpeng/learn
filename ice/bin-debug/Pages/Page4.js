@@ -86,8 +86,8 @@ var Page4 = (function (_super) {
         egret.Tween.get(this.group3.getChildAt(1), { "loop": true })
             .to({ "alpha": 1 }, 1000);
         this.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onclick_3, this);
-        this.img_hand2.alpha = 0;
-        this.img_screen.alpha = 0;
+        //        this.img_hand2.alpha = 0;
+        //        this.img_screen.alpha = 0;
         this.img_text.alpha = 0;
         //        this.img_text_0.alpha = 0;
         this.img_text.anchorOffsetY = -20;
@@ -111,16 +111,16 @@ var Page4 = (function (_super) {
         this.arraw_down.visible = true;
     };
     p.showNext = function () {
-        egret.Tween.get(this.img_hand2, { "loop": true })
-            .to({ "alpha": 1 }, 2000)
-            .wait(1000)
-            .to({ "alpha": 0 }, 1000)
-            .wait(1000);
-        egret.Tween.get(this.img_screen, { "loop": true })
-            .to({ "alpha": 1 }, 2000)
-            .wait(1000)
-            .to({ "alpha": 0 }, 1000)
-            .wait(1000);
+        //        egret.Tween.get(this.img_hand2,{ "loop": true })
+        //            .to({ "alpha": 1 },2000)
+        //            .wait(1000)
+        //            .to({ "alpha": 0 },1000)
+        //            .wait(1000);
+        //        egret.Tween.get(this.img_screen,{ "loop": true })
+        //            .to({ "alpha": 1 },2000)
+        //            .wait(1000)
+        //            .to({ "alpha": 0 },1000)
+        //            .wait(1000);
         //        egret.Tween.get(this.img_text_0).wait(1000)
         //.to({ "alpha": 1 },2000);
         egret.Tween.get(this.img_text).wait(2000)
@@ -132,7 +132,6 @@ var Page4 = (function (_super) {
     };
     p.onclick_page_down = function () {
         if (this.arraw_down.visible == false) {
-            return;
         }
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onclick_4, this);
         egret.Tween.removeAllTweens();

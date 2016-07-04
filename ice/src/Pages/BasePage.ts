@@ -42,7 +42,10 @@ class BasePage extends eui.Component {
         if(this.arraw_down != null) {
             this.arraw_down.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.onclick_page_down,this);
         }
-        this.parent.removeChild(this);
+        if(this.parent && this){
+            this.parent.removeChild(this);
+        }
+        
         
     }
     private arraw_up: ArrawUP;

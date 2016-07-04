@@ -23,7 +23,7 @@ var PageShare = (function (_super) {
     p.begin = function () {
         for (var i = 0; i < this.gp_items.numChildren; i++) {
             var item = this.gp_items.getChildAt(i);
-            egret.Tween.get(item).wait(i * 1500)
+            egret.Tween.get(item).wait(i * 1000)
                 .to({ "alpha": 1 }, 1000);
         }
     };

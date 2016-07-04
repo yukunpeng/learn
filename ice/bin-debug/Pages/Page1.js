@@ -75,13 +75,14 @@ var Page1 = (function (_super) {
         this.img_point.visible = false;
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onclick_touch2, this);
         //this.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onclick_touch3,this);
-        this.gp_loading.visible = true;
-        egret.Tween.get(this.img_loading)
-            .wait(500).set({ "source": RES.getRes("p1_8_1_jpg") })
-            .wait(500).set({ "source": RES.getRes("p1_8_2_jpg") })
-            .wait(500).set({ "source": RES.getRes("p1_8_3_jpg") })
-            .wait(500).set({ "source": RES.getRes("p1_8_4_jpg") })
-            .call(this.onclick_touch3, this);
+        //        this.gp_loading.visible = true;
+        //        egret.Tween.get(this.img_loading)
+        //            .wait(500).set({ "source": RES.getRes("p1_8_1_jpg") })
+        //            .wait(500).set({ "source": RES.getRes("p1_8_2_jpg") })
+        //            .wait(500).set({ "source": RES.getRes("p1_8_3_jpg") })
+        //            .wait(500).set({ "source": RES.getRes("p1_8_4_jpg") })
+        //            .call(this.onclick_touch3,this);
+        this.onclick_touch3();
     };
     p.onclick_touch3 = function () {
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onclick_touch3, this);

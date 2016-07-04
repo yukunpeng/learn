@@ -6,8 +6,8 @@ class Page4 extends BasePage {
     private group3: eui.Group;
     private group4: eui.Group;
     private img_hand1: eui.Image;
-    private img_hand2: eui.Image;
-    private img_screen:eui.Image;
+    //private img_hand2: eui.Image;
+    //private img_screen:eui.Image;
     private img_text:eui.Image;
 //    private img_text_0:eui.Image;
     private img_point:eui.Image;
@@ -106,8 +106,8 @@ class Page4 extends BasePage {
         egret.Tween.get(this.group3.getChildAt(1),{ "loop": true })
             .to({ "alpha": 1 },1000);
         this.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onclick_3,this);
-        this.img_hand2.alpha = 0;
-        this.img_screen.alpha = 0;
+//        this.img_hand2.alpha = 0;
+//        this.img_screen.alpha = 0;
         this.img_text.alpha = 0;
 //        this.img_text_0.alpha = 0;
         this.img_text.anchorOffsetY = -20;
@@ -134,16 +134,16 @@ class Page4 extends BasePage {
     }
     private showNext(){
         
-        egret.Tween.get(this.img_hand2,{ "loop": true })
-            .to({ "alpha": 1 },2000)
-            .wait(1000)
-            .to({ "alpha": 0 },1000)
-            .wait(1000);
-        egret.Tween.get(this.img_screen,{ "loop": true })
-            .to({ "alpha": 1 },2000)
-            .wait(1000)
-            .to({ "alpha": 0 },1000)
-            .wait(1000);
+//        egret.Tween.get(this.img_hand2,{ "loop": true })
+//            .to({ "alpha": 1 },2000)
+//            .wait(1000)
+//            .to({ "alpha": 0 },1000)
+//            .wait(1000);
+//        egret.Tween.get(this.img_screen,{ "loop": true })
+//            .to({ "alpha": 1 },2000)
+//            .wait(1000)
+//            .to({ "alpha": 0 },1000)
+//            .wait(1000);
 //        egret.Tween.get(this.img_text_0).wait(1000)
             //.to({ "alpha": 1 },2000);
         egret.Tween.get(this.img_text).wait(2000)
@@ -156,7 +156,7 @@ class Page4 extends BasePage {
     }
     protected onclick_page_down(){
         if(this.arraw_down.visible == false){
-            return;
+            //return;
         }
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.onclick_4,this);
         egret.Tween.removeAllTweens();

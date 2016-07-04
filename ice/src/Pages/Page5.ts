@@ -21,6 +21,7 @@ class Page5 extends BasePage {
         egret.startTick(this.onupdate,this);
         this.addArrawUP();
         this.addArrawDOWN();
+        
         //this.img_progress.SetProgress(0.1293);
         egret.Tween.get(this.img_point,{ "loop": true }).to({ "alpha": 1 },500).wait(500).to({ "alpha": 0.5 },1500);
     }
@@ -75,6 +76,7 @@ class Page5 extends BasePage {
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.ontouch4,this);
         egret.Tween.removeTweens(this.img_left);
         egret.Tween.removeTweens(this.img_right);
+        this.arraw_down.visible=false;
         this.gp_player.visible = true;
         this.gp_player.alpha = 0;
         this.img_text.alpha = 0;
@@ -96,7 +98,7 @@ class Page5 extends BasePage {
     }
     protected onclick_page_down(){
         if(this.arraw_down.visible == false) {
-            return;
+            //return;
         }
         this.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.ontouch5,this);
         Sound.getInstance().PlayBGM();

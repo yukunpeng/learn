@@ -24,7 +24,7 @@ var Page3 = (function (_super) {
         }
         this.group_arraw.visible = false;
         this.addArrawUP();
-        this.addArrawDOWN();
+        //this.addArrawDOWN();
         egret.Tween.get(this.btn_left, { "loop": true })
             .to({ "alpha": 0.2 }, 1500)
             .to({ "alpha": 1 }, 1000);
@@ -71,6 +71,9 @@ var Page3 = (function (_super) {
             return;
         }
         this.currentsel -= 1;
+        if (this.currentsel <= 1) {
+            this.group_arraw.visible = false;
+        }
         if (this.currentsel <= 0) {
             this.currentsel = 1;
             return;
@@ -81,6 +84,7 @@ var Page3 = (function (_super) {
         if (this.isAnimatting) {
             return;
         }
+        this.group_arraw.visible = true;
         this.currentsel += 1;
         if (this.currentsel >= 6) {
             this.currentsel = 5;

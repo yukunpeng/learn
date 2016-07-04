@@ -126,8 +126,8 @@ var Main = (function (_super) {
      * Create scene interface
      */
     p.startCreateScene = function () {
-        //this.addChild(new Page2());
-        this.addChild(new Page1());
+        this.addChild(new Page2());
+        //this.addChild(new Page5());
         Sound.getInstance();
     };
     return Main;
