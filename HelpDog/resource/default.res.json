@@ -5,7 +5,7 @@
 			"name":"preload"
 		},
 		{
-			"keys":"water_mp3,begin_mp3,hurt_mp3,run_mp3,fail_mp3,smallnum_fnt,win_mp3,dog_png,dog_json,plot_json,boy_jpg,girl_jpg,nzd1_png,share_png",
+			"keys":"water_mp3,begin_mp3,hurt_mp3,run_mp3,fail_mp3,smallnum_fnt,win_mp3,dog_png,dog_json,plot_json,boy_jpg,girl_jpg,nzd1_png,share_png,boy_png,girl_png,girlselect_png,manselect_png,selectbg_png,selectbtn_png,selectfront_png,tipselectbtn_png,title_png",
 			"name":"game"
 		}
 	],
@@ -84,6 +84,51 @@
 			"name":"share_png",
 			"type":"image",
 			"url":"img/share.png"
+		},
+		{
+			"name":"boy_png",
+			"type":"image",
+			"url":"img/boy.png"
+		},
+		{
+			"name":"girl_png",
+			"type":"image",
+			"url":"img/girl.png"
+		},
+		{
+			"name":"girlselect_png",
+			"type":"image",
+			"url":"img/girlselect.png"
+		},
+		{
+			"name":"manselect_png",
+			"type":"image",
+			"url":"img/manselect.png"
+		},
+		{
+			"name":"selectbg_png",
+			"type":"image",
+			"url":"img/selectbg.png"
+		},
+		{
+			"name":"selectbtn_png",
+			"type":"image",
+			"url":"img/selectbtn.png"
+		},
+		{
+			"name":"selectfront_png",
+			"type":"image",
+			"url":"img/selectfront.png"
+		},
+		{
+			"name":"tipselectbtn_png",
+			"type":"image",
+			"url":"img/tipselectbtn.png"
+		},
+		{
+			"name":"title_png",
+			"type":"image",
+			"url":"img/title.png"
 		}
 	]
 }

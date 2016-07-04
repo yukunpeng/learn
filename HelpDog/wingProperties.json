@@ -38,6 +38,51 @@
 					"isFolder":false,
 					"key":"share_png",
 					"name":"share_png"
+				},
+				{
+					"isFolder":false,
+					"key":"boy_png",
+					"name":"boy_png"
+				},
+				{
+					"isFolder":false,
+					"key":"girl_png",
+					"name":"girl_png"
+				},
+				{
+					"isFolder":false,
+					"key":"girlselect_png",
+					"name":"girlselect_png"
+				},
+				{
+					"isFolder":false,
+					"key":"manselect_png",
+					"name":"manselect_png"
+				},
+				{
+					"isFolder":false,
+					"key":"selectbg_png",
+					"name":"selectbg_png"
+				},
+				{
+					"isFolder":false,
+					"key":"selectbtn_png",
+					"name":"selectbtn_png"
+				},
+				{
+					"isFolder":false,
+					"key":"selectfront_png",
+					"name":"selectfront_png"
+				},
+				{
+					"isFolder":false,
+					"key":"tipselectbtn_png",
+					"name":"tipselectbtn_png"
+				},
+				{
+					"isFolder":false,
+					"key":"title_png",
+					"name":"title_png"
 				}
 			]
 		}
