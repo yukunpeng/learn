@@ -23,7 +23,7 @@ class ResultPanel extends PanelBase{
         switch(e.target) {
             case this["cancelBtn"]:
                 Main.ins.removeChild(this);
-                Main.ins.addChild(HomePanel.getIns());
+                Main.ins.addChild(GamePanel.getIns());
                 break;
             case this["shareBtn"]:
                 Main.ins.addChild(SharePanel.getIns());

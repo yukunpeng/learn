@@ -16,11 +16,6 @@
 				},
 				{
 					"isFolder":false,
-					"key":"dog_png",
-					"name":"dog_png"
-				},
-				{
-					"isFolder":false,
 					"key":"boy_jpg",
 					"name":"boy_jpg"
 				},
@@ -223,6 +218,11 @@
 					"isFolder":false,
 					"key":"shengbing4_png",
 					"name":"shengbing4_png"
+				},
+				{
+					"isFolder":false,
+					"key":"mc_png",
+					"name":"mc_png"
 				}
 			]
 		}

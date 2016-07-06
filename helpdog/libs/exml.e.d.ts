@@ -52,8 +52,6 @@ declare module skins{
 }
 declare class GamePanelSkin extends eui.Skin{
 }
-declare class HomePanelSkin extends eui.Skin{
-}
 declare class LoadPanelSkin extends eui.Skin{
 }
 declare class PlotPanelSkin extends eui.Skin{

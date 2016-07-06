@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="HomePanelSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Rect right="0" bottom="0" left="0" fillColor="0xA80000" top="0" x="10" y="10"/>
-	<e:Label y="82" height="72" text="主页面" textAlign="center" width="436" size="53" x="34"/>
-	<e:Label id="startBtn" text="开始" x="165" y="541"/>
-</e:Skin>

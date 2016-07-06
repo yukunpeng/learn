@@ -15,7 +15,6 @@
     "resource/eui_skins/VScrollBarSkin.exml",
     "resource/eui_skins/VSliderSkin.exml",
     "src/panels/GamePanelSkin.exml",
-    "src/panels/HomePanelSkin.exml",
     "src/panels/LoadPanelSkin.exml",
     "src/panels/PlotPanelSkin.exml",
     "src/panels/ResultPanelSkin.exml",

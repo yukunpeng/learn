@@ -5,7 +5,7 @@
 			"name":"preload"
 		},
 		{
-			"keys":"water_mp3,begin_mp3,hurt_mp3,run_mp3,fail_mp3,smallnum_fnt,win_mp3,dog_png,dog_json,plot_json,boy_jpg,girl_jpg,nzd1_png,boy_png,girl_png,girlselect_png,manselect_png,selectbg_png,selectbtn_png,selectfront_png,tipselectbtn_png,title_png,buguanxin_png,chayidian_png,food_png,gamebg_png,housailei_png,huihuoxing_png,jiayouba_png,rehelpdown_png,rehelpup_png,resultbg_png,sharedog_png,sharedown_png,shareup_png,boybg1_png,boybg2_png,diaomao1_png,diaomao2_png,diaomao3_png,diaomao4_png,girlback1_png,girlback2_png,jie1_png,jie2_png,jie3_png,jie4_png,shengbing1_png,shengbing2_png,shengbing3_png,shengbing4_png",
+			"keys":"water_mp3,begin_mp3,hurt_mp3,run_mp3,fail_mp3,smallnum_fnt,win_mp3,plot_json,boy_jpg,girl_jpg,nzd1_png,boy_png,girl_png,girlselect_png,manselect_png,selectbg_png,selectbtn_png,selectfront_png,tipselectbtn_png,title_png,buguanxin_png,chayidian_png,food_png,gamebg_png,housailei_png,huihuoxing_png,jiayouba_png,rehelpdown_png,rehelpup_png,resultbg_png,sharedog_png,sharedown_png,shareup_png,boybg1_png,boybg2_png,diaomao1_png,diaomao2_png,diaomao3_png,diaomao4_png,girlback1_png,girlback2_png,jie1_png,jie2_png,jie3_png,jie4_png,shengbing1_png,shengbing2_png,shengbing3_png,shengbing4_png,mc_json,mc_png",
 			"name":"game"
 		}
 	],
@@ -49,16 +49,6 @@
 			"name":"win_mp3",
 			"type":"sound",
 			"url":"sound/win.mp3"
-		},
-		{
-			"name":"dog_json",
-			"type":"json",
-			"url":"mc/dog.json"
-		},
-		{
-			"name":"dog_png",
-			"type":"image",
-			"url":"mc/dog.png"
 		},
 		{
 			"name":"plot_json",
@@ -269,6 +259,16 @@
 			"name":"shengbing4_png",
 			"type":"image",
 			"url":"mc/shengbing4.png"
+		},
+		{
+			"name":"mc_json",
+			"type":"json",
+			"url":"mc/mc.json"
+		},
+		{
+			"name":"mc_png",
+			"type":"image",
+			"url":"mc/mc.png"
 		}
 	]
 }

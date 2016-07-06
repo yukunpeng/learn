@@ -19,8 +19,10 @@ var RolePanel = (function (_super) {
                 break;
             case this["beginBtn"]:
                 Hero.getIns().sex = this.sex;
+                SoundManager.playBegin();
                 Main.ins.removeChild(this);
-                Main.ins.addChild(HomePanel.getIns());
+                Main.ins.addChild(GamePanel.getIns());
+                GamePanel.getIns().resetGame();
                 break;
         }
     };

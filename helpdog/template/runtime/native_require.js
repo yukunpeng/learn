@@ -16,7 +16,6 @@ var game_file_list = [
 	"bin-debug/Main.js",
 	"bin-debug/panels/PanelBase.js",
 	"bin-debug/panels/GamePanel.js",
-	"bin-debug/panels/HomePanel.js",
 	"bin-debug/panels/LoadPanel.js",
 	"bin-debug/panels/PlotPanel.js",
 	"bin-debug/panels/ResultPanel.js",
