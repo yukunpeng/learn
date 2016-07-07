@@ -64,3 +64,5 @@ declare class SharePanelSkin extends eui.Skin{
 }
 declare class WaterSkin extends eui.Skin{
 }
+declare class ZuzhiSkin extends eui.Skin{
+}

@@ -92,8 +92,9 @@ class Main extends eui.UILayer {
      * preload资源组加载进度
      * loading process of preload resource
      */
-    private onResourceProgress(event:RES.ResourceEvent):void {
-        if (event.groupName == "preload") {
+    private onResourceProgress(e:RES.ResourceEvent):void {
+        if (e.groupName == "game") {
+            //console.log(e.itemsLoaded+"/"+e.itemsTotal);
         }
     }
     /**

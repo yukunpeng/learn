@@ -6,7 +6,6 @@
 class LoadPanel extends PanelBase{
 	public constructor() {
     	   super("src/panels/LoadPanelSkin.exml");
-    	   
 	}
 	
     private static ins: LoadPanel;

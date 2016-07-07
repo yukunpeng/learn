@@ -6,5 +6,4 @@
 	<e:Label y="222" text="生病汪" x="372"/>
 	<e:Label y="380" text="掉毛汪" x="376"/>
 	<e:Image id="food" source="food_png" x="306" y="640"/>
-	<e:Image source="boybg1_png" x="294" y="720"/>
 </e:Skin>

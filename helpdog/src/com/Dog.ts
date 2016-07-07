@@ -4,28 +4,42 @@
  *
  */
 class Dog extends egret.Sprite{
-    private dog:egret.MovieClip;
+    //
+    private mc:egret.MovieClip;
+    //饥饿度
     public hungry:number;
     
     public reset():void{
         this.hungry=3;
     }
-    
     public run():void{
-        this.dog.gotoAndPlay("run",-1);
+        this.mc.gotoAndPlay("run",-1);
+    }
+    public sit(): void {
+        this.mc.gotoAndPlay("sit",-1);
     }
     
     public toRight():void{
-        this.dog.scaleX=-1;
+        this.mc.scaleX=-1;
     }
     
     public toLeft(): void {
-        this.dog.scaleX = 1;
+        this.mc.scaleX = 1;
     }
     
-	public constructor() {
+	public constructor(dogType:string) {
     	   super();
-    	   this.dog=McManager.getDog();
-    	   this.addChild(this.dog);
+    	   switch(dogType){
+               case "jie":
+                   this.mc = McManager.getJie();
+                   break;
+               case "shengbing":
+                   this.mc = McManager.getShengbing();
+                   break;
+               case "diaomao":
+                   this.mc = McManager.getDiaomao();
+                   break;
+    	   }
+    	   this.addChild(this.mc);
 	}
 }

@@ -96,8 +96,8 @@ var Main = (function (_super) {
      * preload资源组加载进度
      * loading process of preload resource
      */
-    p.onResourceProgress = function (event) {
-        if (event.groupName == "preload") {
+    p.onResourceProgress = function (e) {
+        if (e.groupName == "game") {
         }
     };
     p.startCreateScene = function () {

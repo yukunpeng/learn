@@ -1,11 +1,11 @@
 {
 	"groups":[
 		{
-			"keys":"comp_png",
+			"keys":"loading2_png,loadingbg_jpg,p4_11_png,p4_11_1_png",
 			"name":"preload"
 		},
 		{
-			"keys":"water_mp3,begin_mp3,hurt_mp3,run_mp3,fail_mp3,smallnum_fnt,win_mp3,plot_json,boy_jpg,girl_jpg,nzd1_png,boy_png,girl_png,girlselect_png,manselect_png,selectbg_png,selectbtn_png,selectfront_png,tipselectbtn_png,title_png,buguanxin_png,chayidian_png,food_png,gamebg_png,housailei_png,huihuoxing_png,jiayouba_png,rehelpdown_png,rehelpup_png,resultbg_png,sharedog_png,sharedown_png,shareup_png,boybg1_png,boybg2_png,diaomao1_png,diaomao2_png,diaomao3_png,diaomao4_png,girlback1_png,girlback2_png,jie1_png,jie2_png,jie3_png,jie4_png,shengbing1_png,shengbing2_png,shengbing3_png,shengbing4_png,mc_json,mc_png",
+			"keys":"water_mp3,begin_mp3,hurt_mp3,run_mp3,fail_mp3,smallnum_fnt,win_mp3,plot_json,boy_jpg,girl_jpg,boy_png,girl_png,girlselect_png,manselect_png,selectbg_png,selectbtn_png,selectfront_png,tipselectbtn_png,title_png,buguanxin_png,chayidian_png,food_png,gamebg_png,housailei_png,huihuoxing_png,jiayouba_png,rehelpdown_png,rehelpup_png,resultbg_png,sharedog_png,sharedown_png,shareup_png,boybg1_png,boybg2_png,diaomao1_png,diaomao2_png,diaomao3_png,diaomao4_png,girlback1_png,girlback2_png,jie1_png,jie2_png,jie3_png,jie4_png,shengbing1_png,shengbing2_png,shengbing3_png,shengbing4_png,mc_json,mc_png",
 			"name":"game"
 		}
 	],
@@ -41,11 +41,6 @@
 			"url":"num/smallnum.fnt"
 		},
 		{
-			"name":"comp_png",
-			"type":"image",
-			"url":"img/comp.png"
-		},
-		{
 			"name":"win_mp3",
 			"type":"sound",
 			"url":"sound/win.mp3"
@@ -64,11 +59,6 @@
 			"name":"girl_jpg",
 			"type":"image",
 			"url":"img/girl.jpg"
-		},
-		{
-			"name":"nzd1_png",
-			"type":"image",
-			"url":"img/nzd1.png"
 		},
 		{
 			"name":"boy_png",
@@ -269,6 +259,26 @@
 			"name":"mc_png",
 			"type":"image",
 			"url":"mc/mc.png"
+		},
+		{
+			"name":"loading2_png",
+			"type":"image",
+			"url":"img/loading2.png"
+		},
+		{
+			"name":"loadingbg_jpg",
+			"type":"image",
+			"url":"img/loadingbg.jpg"
+		},
+		{
+			"name":"p4_11_png",
+			"type":"image",
+			"url":"img/p4_11.png"
+		},
+		{
+			"name":"p4_11_1_png",
+			"type":"image",
+			"url":"img/p4_11_1.png"
 		}
 	]
 }

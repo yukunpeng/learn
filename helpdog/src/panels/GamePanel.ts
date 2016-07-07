@@ -23,6 +23,8 @@ class GamePanel extends PanelBase{
     private dogTime: number = 2000;
     private foodTime: number = 500;
     
+    private man:Man;
+    
     
     //重置游戏
     public resetGame():void{
@@ -40,6 +42,7 @@ class GamePanel extends PanelBase{
         this.dog2.y = this.y2;
         this.dog3.x = this.rightX;
         this.dog3.y = this.y3;
+        
         this.dog1.run();
         this.dog2.run();
         this.dog3.run();
@@ -111,18 +114,19 @@ class GamePanel extends PanelBase{
     
 	public constructor() {
     	   super("src/panels/GamePanelSkin.exml");
-    	   //更新性别
-    	   if(Hero.getIns().sex=="girl"){
-            this["thum"].texture = RES.getRes("girl_jpg");
-    	   }
+    	   //根据性别生成人物
+        this.man = new Man(Hero.getIns().sex);
+        this.man.x = 100;
+        this.man.y = 300;
+        this.addChild(this.man);
     	   //初始化timer
     	   this.timer=new egret.Timer(1000,this.totalTime);
         this.timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.timerCom,this);
         this.timer.addEventListener(egret.TimerEvent.TIMER,this.onTimer,this);
         //初始化三只汪
-        this.dog1 = new Dog();
-        this.dog2 = new Dog();
-        this.dog3 = new Dog();
+        this.dog1 = new Dog("jie");
+        this.dog2 = new Dog("shengbing");
+        this.dog3 = new Dog("diaomao");
         this.addChild(this.dog1);
         this.addChild(this.dog2);
         this.addChild(this.dog3);
@@ -146,6 +150,9 @@ class GamePanel extends PanelBase{
     }
     
     private shoot():void{
+        //角色扔食物动画
+        this.man.plit();
+        //食物飞出去
         egret.Tween.get(this["food"])
             .to({ y: -100 },this.foodTime).call(function(){
                 this["food"].y=704;

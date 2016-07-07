@@ -4,6 +4,7 @@
  *
  */
 class Hero {
+    //boy或girl
     public sex: string;
     
 	public constructor() {

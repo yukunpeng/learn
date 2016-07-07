@@ -12,6 +12,7 @@ var game_file_list = [
 	"bin-debug/AssetAdapter.js",
 	"bin-debug/com/Dog.js",
 	"bin-debug/com/Hero.js",
+	"bin-debug/com/Man.js",
 	"bin-debug/LoadingUI.js",
 	"bin-debug/Main.js",
 	"bin-debug/panels/PanelBase.js",

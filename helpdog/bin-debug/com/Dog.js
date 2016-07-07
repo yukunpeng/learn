@@ -5,23 +5,36 @@
  */
 var Dog = (function (_super) {
     __extends(Dog, _super);
-    function Dog() {
+    function Dog(dogType) {
         _super.call(this);
-        this.dog = McManager.getDog();
-        this.addChild(this.dog);
+        switch (dogType) {
+            case "jie":
+                this.mc = McManager.getJie();
+                break;
+            case "shengbing":
+                this.mc = McManager.getShengbing();
+                break;
+            case "diaomao":
+                this.mc = McManager.getDiaomao();
+                break;
+        }
+        this.addChild(this.mc);
     }
     var d = __define,c=Dog,p=c.prototype;
     p.reset = function () {
         this.hungry = 3;
     };
     p.run = function () {
-        this.dog.gotoAndPlay("run", -1);
+        this.mc.gotoAndPlay("run", -1);
+    };
+    p.sit = function () {
+        this.mc.gotoAndPlay("sit", -1);
     };
     p.toRight = function () {
-        this.dog.scaleX = -1;
+        this.mc.scaleX = -1;
     };
     p.toLeft = function () {
-        this.dog.scaleX = 1;
+        this.mc.scaleX = 1;
     };
     return Dog;
 }(egret.Sprite));

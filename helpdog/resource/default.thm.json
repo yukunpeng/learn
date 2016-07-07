@@ -20,7 +20,8 @@
     "src/panels/ResultPanelSkin.exml",
     "src/panels/RolePanelSkin.exml",
     "src/panels/SharePanelSkin.exml",
-    "src/panels/WaterPanelSkin.exml"
+    "src/panels/WaterPanelSkin.exml",
+    "src/panels/ZuzhiSkin.exml"
   ],
   "skins": {
     "eui.Button": "resource/eui_skins/ButtonSkin.exml",
