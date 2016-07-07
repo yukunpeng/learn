@@ -1,0 +1,22 @@
+[
+	{
+		"levelName":"新手村",
+		"monsterArr":["1","2","3","4"]
+	},
+	{
+		"levelName":"空旷土地",
+		"monsterArr":["2","1","4","3"]
+	},
+	{
+		"levelName":"墙根低下",
+		"monsterArr":["2","1","4","3"]
+	},
+	{
+		"levelName":"死槐树",
+		"monsterArr":["2","1","4","3"]
+	},
+	{
+		"levelName":"房顶上",
+		"monsterArr":["2","1","4","3"]
+	}
+]
