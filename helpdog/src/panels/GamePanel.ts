@@ -116,8 +116,8 @@ class GamePanel extends PanelBase{
     	   super("src/panels/GamePanelSkin.exml");
     	   //根据性别生成人物
         this.man = new Man(Hero.getIns().sex);
-        this.man.x = 100;
-        this.man.y = 300;
+        this.man.x = 240;
+        this.man.y = 800;
         this.addChild(this.man);
     	   //初始化timer
     	   this.timer=new egret.Timer(1000,this.totalTime);
