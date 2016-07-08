@@ -50,7 +50,7 @@ var ResultPanel = (function (_super) {
             this["failGroup"].visible = false;
             this["winGroup"].visible = true;
             var force = 99 - (usedTime - 9) * 2;
-            str = "你爆发了" + force + "的爱宠力量。";
+            str = "你爆发了" + force + "%的爱宠力量。";
             //胜利文字
             this["winTf"].text = str;
             this["failTf"].text = str;
