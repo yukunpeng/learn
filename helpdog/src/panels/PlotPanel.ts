@@ -4,39 +4,37 @@
  *
  */
 class PlotPanel extends PanelBase{
-    private plot:string[];
+    private plotArr: string[] = ["plot1_jpg","plot2_jpg","plot3_jpg"];
     private pos:number;
     
 	public constructor() {
     	   super("src/panels/PlotPanelSkin.exml");
-        this.plot=RES.getRes("plot_json");
         this.pos=0;
-        
-        this.updateView();
     }
     
     public onTouch(e: egret.TouchEvent): void {
         switch(e.target){
-            case this["jumpTf"]:
+            case this["jumpBtn"]:
                 Main.ins.removeChild(this);
                 Main.ins.addChild(RolePanel.getIns());
                 break;
+            case this["preBtn"]:
+                this.pos--;
+                if(this.pos == -1) {
+                    this.pos = 0;
+                }
+                this["plotPic"].texture = RES.getRes(this.plotArr[this.pos]);
+                break;
             default:
                 this.pos++;
-                if(this.pos>=this.plot.length){
+                if(this.pos == this.plotArr.length){
                     Main.ins.removeChild(this);
                     Main.ins.addChild(RolePanel.getIns());
                 }else{
-                    this.updateView();    
+                    this["plotPic"].texture = RES.getRes(this.plotArr[this.pos]);
                 }
                 break;
         }
-    }
-    
-    
-    
-    private updateView():void{
-        this["plotTf"].text=this.plot[this.pos];
     }
     
     //======================

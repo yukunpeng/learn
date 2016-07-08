@@ -9,8 +9,8 @@ var GamePanel = (function (_super) {
         _super.call(this, "src/panels/GamePanelSkin.exml");
         this.totalTime = 60;
         //狗狗初始左右坐标
-        this.rightX = 378;
-        this.leftX = 0;
+        this.rightX = 540;
+        this.leftX = 100;
         //狗狗初始y坐标
         this.y1 = 128;
         this.y2 = 276;
@@ -19,8 +19,8 @@ var GamePanel = (function (_super) {
         this.foodTime = 500;
         //根据性别生成人物
         this.man = new Man(Hero.getIns().sex);
-        this.man.x = 240;
-        this.man.y = 800;
+        this.man.x = 320;
+        this.man.y = 960;
         this.addChild(this.man);
         //初始化timer
         this.timer = new egret.Timer(1000, this.totalTime);

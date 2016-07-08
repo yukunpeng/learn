@@ -5,7 +5,6 @@ var Main = (function (_super) {
     __extends(Main, _super);
     function Main() {
         _super.apply(this, arguments);
-        this.isThemeLoadEnd = false;
         this.isResourceLoadEnd = false;
     }
     var d = __define,c=Main,p=c.prototype;
@@ -37,20 +36,18 @@ var Main = (function (_super) {
         //加载皮肤主题配置文件,可以手动修改这个文件。替换默认皮肤。
         var theme = new eui.Theme("resource/default.thm.json", this.stage);
         theme.addEventListener(eui.UIEvent.COMPLETE, this.onThemeLoadComplete, this);
-        RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
-        RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
-        RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
-        RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
-        RES.loadGroup("preload", 2);
-        RES.loadGroup("game", 1);
     };
     /**
      * 主题文件加载完成,开始预加载
      * Loading of theme configuration file is complete, start to pre-load the
      */
     p.onThemeLoadComplete = function () {
-        this.isThemeLoadEnd = true;
-        this.createScene();
+        RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.onResourceLoadComplete, this);
+        RES.addEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
+        RES.addEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
+        RES.addEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
+        RES.loadGroup("preload", 2);
+        RES.loadGroup("game", 1);
     };
     /**
      * preload资源组加载完成
@@ -65,12 +62,6 @@ var Main = (function (_super) {
             RES.removeEventListener(RES.ResourceEvent.GROUP_LOAD_ERROR, this.onResourceLoadError, this);
             RES.removeEventListener(RES.ResourceEvent.GROUP_PROGRESS, this.onResourceProgress, this);
             RES.removeEventListener(RES.ResourceEvent.ITEM_LOAD_ERROR, this.onItemLoadError, this);
-            this.isResourceLoadEnd = true;
-            this.createScene();
-        }
-    };
-    p.createScene = function () {
-        if (this.isThemeLoadEnd && this.isResourceLoadEnd) {
             this.startCreateScene();
         }
     };
@@ -98,6 +89,7 @@ var Main = (function (_super) {
      */
     p.onResourceProgress = function (e) {
         if (e.groupName == "game") {
+            LoadPanel.getIns().setPro(e.itemsLoaded, e.itemsTotal);
         }
     };
     p.startCreateScene = function () {

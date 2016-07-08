@@ -8,8 +8,8 @@ class GamePanel extends PanelBase{
     private totalTime:number=60;
     
     //狗狗初始左右坐标
-    private rightX: number=378;
-    private leftX: number=0;
+    private rightX: number=540;
+    private leftX: number=100;
     //狗狗初始y坐标
     private y1: number = 128;
     private y2: number = 276;
@@ -116,8 +116,8 @@ class GamePanel extends PanelBase{
     	   super("src/panels/GamePanelSkin.exml");
     	   //根据性别生成人物
         this.man = new Man(Hero.getIns().sex);
-        this.man.x = 240;
-        this.man.y = 800;
+        this.man.x = 320;
+        this.man.y = 960;
         this.addChild(this.man);
     	   //初始化timer
     	   this.timer=new egret.Timer(1000,this.totalTime);

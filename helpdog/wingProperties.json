@@ -233,6 +233,21 @@
 					"isFolder":false,
 					"key":"p4_11_png",
 					"name":"p4_11_png"
+				},
+				{
+					"isFolder":false,
+					"key":"plot1_jpg",
+					"name":"plot1_jpg"
+				},
+				{
+					"isFolder":false,
+					"key":"plot2_jpg",
+					"name":"plot2_jpg"
+				},
+				{
+					"isFolder":false,
+					"key":"plot3_jpg",
+					"name":"plot3_jpg"
 				}
 			]
 		}

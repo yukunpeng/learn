@@ -31,10 +31,10 @@ var Dog = (function (_super) {
         this.mc.gotoAndPlay("sit", -1);
     };
     p.toRight = function () {
-        this.mc.scaleX = -1;
+        this.mc.scaleX = 1;
     };
     p.toLeft = function () {
-        this.mc.scaleX = 1;
+        this.mc.scaleX = -1;
     };
     return Dog;
 }(egret.Sprite));

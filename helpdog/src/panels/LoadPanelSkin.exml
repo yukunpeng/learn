@@ -1,8 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="LoadPanelSkin" width="640" height="960" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*">
-	<e:Rect fillColor="0xFFFFFF" left="0" right="0" top="0" bottom="0"/>
-	<e:Image source="p4_11_1_png" x="173" y="534"/>
-	<e:Image source="p4_11_png" x="171" y="519"/>
+<e:Skin class="LoadPanelSkin" width="640" height="960" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect fillColor="0xFFFFFF" left="0" right="0" top="0" bottom="0" locked="true"/>
+	<e:Image id="bg" source="p4_11_1_png" x="171" y="536"/>
+	<e:Image id="pro" source="p4_11_png" x="171" y="536"/>
 	<e:Image source="loading2_png" x="147" y="521"/>
 	<e:Image source="loadingbg_jpg" x="274" y="262"/>
+	<e:Label id="proTxt" text="10%" x="489" y="527" size="16" textColor="0xBCBDC0"/>
 </e:Skin>

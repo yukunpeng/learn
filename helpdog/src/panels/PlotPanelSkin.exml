@@ -1,8 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="PlotPanelSkin" width="640" height="960" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Rect fillColor="0xA80000" left="0" right="0" top="0" bottom="0"/>
-	<e:Label id="plotTf" text="标签" x="20" y="634" width="436" height="142"/>
-	<e:Label width="436" y="78" height="72" text="剧情介绍" x="115" textAlign="center" size="53"/>
-	<e:Rect height="12" width="438" x="18" y="604"/>
-	<e:Label id="jumpTf" text="跳过" x="34" y="544"/>
+	<e:Image id="plotPic" source="plot1_jpg" x="0" y="0"/>
+	<e:Rect id="preBtn" height="112" width="98" x="542" y="454" fillAlpha="0"/>
+	<e:Rect id="jumpBtn" y="10" fillAlpha="0" width="98" height="62" x="524"/>
 </e:Skin>
