@@ -2,4 +2,5 @@
 <e:Skin class="GamePanelSkin" width="640" height="960" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
 	<e:Image source="gamebg_png" x="0" y="0"/>
 	<e:Image id="food" source="food_png" x="302" y="600"/>
+	<e:Label id="timerTf" text="30" x="565" y="16" textColor="0xFF0000" width="58" textAlign="center" fontFamily="微软雅黑"/>
 </e:Skin>

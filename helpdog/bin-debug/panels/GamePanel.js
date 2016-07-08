@@ -7,7 +7,7 @@ var GamePanel = (function (_super) {
     __extends(GamePanel, _super);
     function GamePanel() {
         _super.call(this, "src/panels/GamePanelSkin.exml");
-        this.totalTime = 60;
+        this.totalTime = 30;
         //狗狗初始左右坐标
         this.rightX = 540;
         this.leftX = 100;
@@ -36,11 +36,13 @@ var GamePanel = (function (_super) {
     var d = __define,c=GamePanel,p=c.prototype;
     //重置游戏
     p.resetGame = function () {
+        this.score = 0;
         //狗粮的位置
         this["food"].y = this.foodY;
         //timer
         this.timer.reset();
         this.timer.start();
+        this["timerTf"].text = this.totalTime;
         //三只汪的位置
         this.dogArr = [this.shengbingDog, this.jieDog, this.diaomaoDog];
         for (var i = 0; i < 3; i++) {
@@ -84,7 +86,7 @@ var GamePanel = (function (_super) {
         egret.Tween.removeAllTweens();
         Main.ins.removeChild(this);
         Main.ins.addChild(ResultPanel.getIns());
-        ResultPanel.getIns().resetPanel(this.timer.currentCount);
+        ResultPanel.getIns().resetPanel(this.timer.currentCount, this.score);
     };
     p.onEnter = function (e) {
         for (var i = 0; i < this.dogArr.length; i++) {
@@ -95,6 +97,7 @@ var GamePanel = (function (_super) {
         }
     };
     p.behit = function (dog, i) {
+        this.score++;
         //汪星人饥饿值降低
         dog.hungry--;
         if (dog.hungry <= 0) {
@@ -136,6 +139,7 @@ var GamePanel = (function (_super) {
     };
     //倒计时结束
     p.onTimer = function (e) {
+        this["timerTf"].text = this.timer.repeatCount - this.timer.currentCount;
     };
     //倒计时结束
     p.timerCom = function (e) {

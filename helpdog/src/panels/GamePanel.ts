@@ -4,8 +4,10 @@
  *
  */
 class GamePanel extends PanelBase{
+    private score:number;
+    
     private timer:egret.Timer;
-    private totalTime:number=60;
+    private totalTime:number=30;
     
     //狗狗初始左右坐标
     private rightX: number=540;
@@ -27,11 +29,14 @@ class GamePanel extends PanelBase{
     
     //重置游戏
     public resetGame():void{
+        
+        this.score=0;
         //狗粮的位置
         this["food"].y = this.foodY;
         //timer
         this.timer.reset();
         this.timer.start();
+        this["timerTf"].text=this.totalTime;
         //三只汪的位置
         this.dogArr = [this.shengbingDog,this.jieDog,this.diaomaoDog];
         for(var i:number=0;i<3;i++){
@@ -79,7 +84,7 @@ class GamePanel extends PanelBase{
         egret.Tween.removeAllTweens();
         Main.ins.removeChild(this);
         Main.ins.addChild(ResultPanel.getIns());
-        ResultPanel.getIns().resetPanel(this.timer.currentCount);
+        ResultPanel.getIns().resetPanel(this.timer.currentCount,this.score);
     }
     
     private onEnter(e:egret.Event):void{
@@ -92,6 +97,7 @@ class GamePanel extends PanelBase{
     }
     
     private behit(dog:Dog,i:number):void{
+        this.score++;
         //汪星人饥饿值降低
         dog.hungry--;
         if(dog.hungry <= 0) {
@@ -156,6 +162,7 @@ class GamePanel extends PanelBase{
 
     //倒计时结束
     private onTimer(e: egret.TimerEvent): void {
+        this["timerTf"].text = this.timer.repeatCount-this.timer.currentCount;
     }
     //倒计时结束
     private timerCom(e: egret.TimerEvent): void {
