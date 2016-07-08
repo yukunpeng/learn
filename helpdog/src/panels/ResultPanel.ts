@@ -8,6 +8,7 @@ class ResultPanel extends PanelBase{
     
     
     public resetPanel(usedTime:number):void{
+        console.log(usedTime);
         if(usedTime<=this.winTime){
             this["winTf"].visible=true;
         }else{

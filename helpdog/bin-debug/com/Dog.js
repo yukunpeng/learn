@@ -5,9 +5,10 @@
  */
 var Dog = (function (_super) {
     __extends(Dog, _super);
-    function Dog(dogType) {
+    function Dog(type) {
         _super.call(this);
-        switch (dogType) {
+        this.type = type;
+        switch (type) {
             case "jie":
                 this.mc = McManager.getJie();
                 break;
@@ -28,6 +29,7 @@ var Dog = (function (_super) {
         this.mc.gotoAndPlay("run", -1);
     };
     p.sit = function () {
+        this.mc.scaleX = 1;
         this.mc.gotoAndPlay("sit", -1);
     };
     p.toRight = function () {

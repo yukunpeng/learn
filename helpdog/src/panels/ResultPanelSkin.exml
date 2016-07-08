@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <e:Skin class="ResultPanelSkin" width="640" height="960" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Image source="resultbg_png" x="0" y="0"/>
-	<e:Label y="154" height="72" text="游戏结束" textAlign="center" width="436" size="53" x="91"/>
-	<e:Label id="winTf" y="224" text="你爆发了99%的爱宠力量，猴赛雷，你拯救了汪星人的未来！" x="125" width="424" height="134"/>
-	<e:Button id="cancelBtn" x="320" y="518">
+	<e:Label y="162" height="72" text="恭喜" textAlign="center" width="248" size="68" x="182" textColor="0xFF0000" bold="true" fontFamily="微软雅黑"/>
+	<e:Label id="winTf" y="278" text="您打败了全国98%的网友" x="117" width="424" height="44" textColor="0xFF0000" textAlign="center" fontFamily="微软雅黑"/>
+	<e:Button id="cancelBtn" x="349" y="730">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="rehelpup_png" source.down="rehelpdown_png"/>
@@ -11,7 +11,7 @@
 			</e:Skin>
 		</e:skinName>
 	</e:Button>
-	<e:Button id="shareBtn" y="692" x="328">
+	<e:Button id="shareBtn" y="846" x="349">
 		<e:skinName>
 			<e:Skin states="up,down,disabled">
 				<e:Image width="100%" height="100%" source="shareup_png" source.down="sharedown_png"/>

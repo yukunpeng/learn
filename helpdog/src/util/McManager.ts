@@ -4,17 +4,16 @@
  *
  */
 class McManager {
-    
     //获得掉毛汪
     public static getDiaomao(): egret.MovieClip {
         return McManager.getMc("diaomao");
     }
-    
+
     //获得饥饿汪
     public static getJie(): egret.MovieClip {
         return McManager.getMc("jie");
     }
-    
+
     //获得生病汪
     public static getShengbing(): egret.MovieClip {
         return McManager.getMc("shengbing");

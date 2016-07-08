@@ -11,66 +11,70 @@ class GamePanel extends PanelBase{
     private rightX: number=540;
     private leftX: number=100;
     //狗狗初始y坐标
-    private y1: number = 128;
-    private y2: number = 276;
-    private y3: number = 444;
+    private yArr: number[] = [128,276,444];
     //三只汪
-    private dog1: Dog;
-    private dog2: Dog;
-    private dog3: Dog;
+    private shengbingDog: Dog;
+    private jieDog: Dog;
+    private diaomaoDog: Dog;
     private dogArr:Dog[];
     
     private dogTime: number = 2000;
     private foodTime: number = 500;
+    private foodY:number=660;
     
     private man:Man;
     
     
     //重置游戏
     public resetGame():void{
-        //倒计时
-        this["countTf"].text=this.totalTime;
         //狗粮的位置
-        this["food"].y = 704;
+        this["food"].y = this.foodY;
         //timer
         this.timer.reset();
         this.timer.start();
         //三只汪的位置
-        this.dog1.x = this.rightX;
-        this.dog1.y = this.y1;
-        this.dog2.x = this.leftX;
-        this.dog2.y = this.y2;
-        this.dog3.x = this.rightX;
-        this.dog3.y = this.y3;
-        
-        this.dog1.run();
-        this.dog2.run();
-        this.dog3.run();
-        this.dog1.reset();
-        this.dog2.reset();
-        this.dog3.reset(); 
-        this.dog1.visible = true;
-        this.dog2.visible = true;
-        this.dog3.visible = true;
-        this.dog1.toLeft();
-        this.dog2.toRight();
-        this.dog3.toLeft();
-        this.dogArr = [this.dog1,this.dog2,this.dog3];
-        //三只汪跑起来
-        egret.Tween.get(this.dog1,{ loop: true })
-            .to({ x: this.leftX },this.dogTime).call(this.toLeftOver,this,[this.dog1])
-            .to({ x: this.rightX },this.dogTime).call(this.toRightOver,this,[this.dog1]);
-        egret.Tween.get(this.dog2,{ loop: true })
-            .to({ x: this.rightX },this.dogTime).call(this.toRightOver,this,[this.dog2])
-            .to({ x: this.leftX },this.dogTime).call(this.toLeftOver,this,[this.dog2]);
-        egret.Tween.get(this.dog3,{ loop: true })
-            .to({ x: this.leftX },this.dogTime).call(this.toLeftOver,this,[this.dog3])
-            .to({ x: this.rightX },this.dogTime).call(this.toRightOver,this,[this.dog3]);
+        this.dogArr = [this.shengbingDog,this.jieDog,this.diaomaoDog];
+        for(var i:number=0;i<3;i++){
+            var dog: Dog = this.dogArr[i];
+            switch(i){
+                case 0://向右
+                    dog.x = this.leftX;
+                    dog.toRight();
+                    //汪跑起来
+                    egret.Tween.get(dog,{ loop: true })
+                        .to({ x: this.rightX },this.dogTime).call(this.toRightOver,this,[dog])
+                        .to({ x: this.leftX },this.dogTime).call(this.toLeftOver,this,[dog]);
+                    break;
+                case 1://向左
+                    dog.x = this.rightX;
+                    dog.toLeft();
+                    //汪跑起来
+                    egret.Tween.get(dog,{ loop: true })
+                        .to({ x: this.leftX },this.dogTime).call(this.toLeftOver,this,[dog])
+                        .to({ x: this.rightX },this.dogTime).call(this.toRightOver,this,[dog]);
+                    break;
+                case 2://向右
+                    dog.x = this.leftX;
+                    dog.toRight();
+                    //汪跑起来
+                    egret.Tween.get(dog,{ loop: true })
+                        .to({ x: this.rightX },this.dogTime).call(this.toRightOver,this,[dog])
+                        .to({ x: this.leftX },this.dogTime).call(this.toLeftOver,this,[dog]);
+                    break;
+            }
+            
+            this.dogArr[i].run();
+            this.dogArr[i].reset();
+            this.dogArr[i].y=this.yArr[i];
+        }
+       
         this.addEventListener(egret.Event.ENTER_FRAME,this.onEnter,this);
     }
     
     //游戏结束
     private gameOver() {
+        this.timer.stop();
+        
         this.removeEventListener(egret.Event.ENTER_FRAME,this.onEnter,this);
         egret.Tween.removeAllTweens();
         Main.ins.removeChild(this);
@@ -81,27 +85,45 @@ class GamePanel extends PanelBase{
     private onEnter(e:egret.Event):void{
         for(var i:number=0;i<this.dogArr.length;i++){
             if(Tools.hitTest(this["food"],this.dogArr[i])) {
-                //汪星人饥饿值降低
-                this.dogArr[i].hungry--;
-                if(this.dogArr[i].hungry<=0){
-                    //喂饱一只汪
-                    egret.Tween.removeTweens(this.dogArr[i]);
-                    this.dogArr[i].visible=false;
-                    this.dogArr.splice(i,1);
-                    //喂饱了所有的汪
-                    if(this.dogArr.length==0){
-                        //食物动画停止
-                        egret.Tween.removeTweens(this["food"]);
-                        //游戏结束
-                        this.gameOver();
-                    }
-                }
-                //实物归位
-                egret.Tween.removeTweens(this["food"]);
-                this["food"].y = 704;
+                this.behit(this.dogArr[i],i);
                 break;
             }
         }
+    }
+    
+    private behit(dog:Dog,i:number):void{
+        //汪星人饥饿值降低
+        dog.hungry--;
+        if(dog.hungry <= 0) {
+            //喂饱一只汪
+            egret.Tween.removeTweens(dog);
+            dog.sit();
+            switch(dog.type){
+               case "shengbing":
+                    dog.x = 475;
+                    dog.y = 930;
+                    break;
+               case "jie":
+                   dog.x = 265;
+                   dog.y = 930;
+                   break;
+                case "diaomao":
+                    dog.x = 205;
+                    dog.y = 970;
+                    break;
+            }
+            this.dogArr.splice(i,1);
+            //喂饱了所有的汪
+            if(this.dogArr.length == 0) {
+                //食物动画停止
+                egret.Tween.removeTweens(this["food"]);
+                //游戏结束
+                egret.Tween.get(this).wait(1000).call(this.gameOver,this);
+            }
+        }
+        //实物归位
+        egret.Tween.removeTweens(this["food"]);
+        this["food"].y = this.foodY;
     }
     
     private toRightOver(dog:Dog) {
@@ -124,17 +146,16 @@ class GamePanel extends PanelBase{
         this.timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.timerCom,this);
         this.timer.addEventListener(egret.TimerEvent.TIMER,this.onTimer,this);
         //初始化三只汪
-        this.dog1 = new Dog("jie");
-        this.dog2 = new Dog("shengbing");
-        this.dog3 = new Dog("diaomao");
-        this.addChild(this.dog1);
-        this.addChild(this.dog2);
-        this.addChild(this.dog3);
+        this.jieDog = new Dog("jie");
+        this.shengbingDog = new Dog("shengbing");
+        this.diaomaoDog = new Dog("diaomao");
+        this.addChild(this.jieDog);
+        this.addChild(this.shengbingDog);
+        this.addChild(this.diaomaoDog);
     }
 
     //倒计时结束
     private onTimer(e: egret.TimerEvent): void {
-        this["countTf"].text=this.timer.repeatCount-this.timer.currentCount;
     }
     //倒计时结束
     private timerCom(e: egret.TimerEvent): void {
@@ -155,7 +176,7 @@ class GamePanel extends PanelBase{
         //食物飞出去
         egret.Tween.get(this["food"])
             .to({ y: -100 },this.foodTime).call(function(){
-                this["food"].y=704;
+                this["food"].y = this.foodY;
             },this)
     }
     

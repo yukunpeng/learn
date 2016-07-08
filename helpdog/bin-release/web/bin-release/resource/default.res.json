@@ -1,11 +1,11 @@
 {
 	"groups":[
 		{
-			"keys":"comp_png",
+			"keys":"loading2_png,loadingbg_jpg,p4_11_png,p4_11_1_png",
 			"name":"preload"
 		},
 		{
-			"keys":"water_mp3,begin_mp3,hurt_mp3,run_mp3,fail_mp3,smallnum_fnt,win_mp3,dog_png,dog_json,plot_json,boy_jpg,girl_jpg,nzd1_png,share_png",
+			"keys":"water_mp3,begin_mp3,hurt_mp3,run_mp3,fail_mp3,smallnum_fnt,win_mp3,plot_json,boy_jpg,girl_jpg,boy_png,girl_png,girlselect_png,manselect_png,selectbg_png,selectbtn_png,selectfront_png,tipselectbtn_png,title_png,buguanxin_png,chayidian_png,food_png,gamebg_png,housailei_png,huihuoxing_png,jiayouba_png,rehelpdown_png,rehelpup_png,resultbg_png,sharedog_png,sharedown_png,shareup_png,boybg1_png,boybg2_png,diaomao1_png,diaomao2_png,diaomao3_png,diaomao4_png,girlback1_png,girlback2_png,jie1_png,jie2_png,jie3_png,jie4_png,shengbing1_png,shengbing2_png,shengbing3_png,shengbing4_png,mc_json,mc_png,plot1_jpg,plot2_jpg,plot3_jpg",
 			"name":"game"
 		}
 	],
@@ -41,24 +41,9 @@
 			"url":"num/smallnum.fnt"
 		},
 		{
-			"name":"comp_png",
-			"type":"image",
-			"url":"img/comp.png"
-		},
-		{
 			"name":"win_mp3",
 			"type":"sound",
 			"url":"sound/win.mp3"
-		},
-		{
-			"name":"dog_json",
-			"type":"json",
-			"url":"mc/dog.json"
-		},
-		{
-			"name":"dog_png",
-			"type":"image",
-			"url":"mc/dog.png"
 		},
 		{
 			"name":"plot_json",
@@ -76,14 +61,239 @@
 			"url":"img/girl.jpg"
 		},
 		{
-			"name":"nzd1_png",
+			"name":"boy_png",
 			"type":"image",
-			"url":"img/nzd1.png"
+			"url":"img/boy.png"
 		},
 		{
-			"name":"share_png",
+			"name":"girl_png",
 			"type":"image",
-			"url":"img/share.png"
+			"url":"img/girl.png"
+		},
+		{
+			"name":"girlselect_png",
+			"type":"image",
+			"url":"img/girlselect.png"
+		},
+		{
+			"name":"manselect_png",
+			"type":"image",
+			"url":"img/manselect.png"
+		},
+		{
+			"name":"selectbg_png",
+			"type":"image",
+			"url":"img/selectbg.png"
+		},
+		{
+			"name":"selectbtn_png",
+			"type":"image",
+			"url":"img/selectbtn.png"
+		},
+		{
+			"name":"selectfront_png",
+			"type":"image",
+			"url":"img/selectfront.png"
+		},
+		{
+			"name":"tipselectbtn_png",
+			"type":"image",
+			"url":"img/tipselectbtn.png"
+		},
+		{
+			"name":"title_png",
+			"type":"image",
+			"url":"img/title.png"
+		},
+		{
+			"name":"buguanxin_png",
+			"type":"image",
+			"url":"img/buguanxin.png"
+		},
+		{
+			"name":"chayidian_png",
+			"type":"image",
+			"url":"img/chayidian.png"
+		},
+		{
+			"name":"food_png",
+			"type":"image",
+			"url":"img/food.png"
+		},
+		{
+			"name":"gamebg_png",
+			"type":"image",
+			"url":"img/gamebg.png"
+		},
+		{
+			"name":"housailei_png",
+			"type":"image",
+			"url":"img/housailei.png"
+		},
+		{
+			"name":"huihuoxing_png",
+			"type":"image",
+			"url":"img/huihuoxing.png"
+		},
+		{
+			"name":"jiayouba_png",
+			"type":"image",
+			"url":"img/jiayouba.png"
+		},
+		{
+			"name":"rehelpdown_png",
+			"type":"image",
+			"url":"img/rehelpdown.png"
+		},
+		{
+			"name":"rehelpup_png",
+			"type":"image",
+			"url":"img/rehelpup.png"
+		},
+		{
+			"name":"resultbg_png",
+			"type":"image",
+			"url":"img/resultbg.png"
+		},
+		{
+			"name":"sharedog_png",
+			"type":"image",
+			"url":"img/sharedog.png"
+		},
+		{
+			"name":"sharedown_png",
+			"type":"image",
+			"url":"img/sharedown.png"
+		},
+		{
+			"name":"shareup_png",
+			"type":"image",
+			"url":"img/shareup.png"
+		},
+		{
+			"name":"boybg1_png",
+			"type":"image",
+			"url":"mc/boybg1.png"
+		},
+		{
+			"name":"boybg2_png",
+			"type":"image",
+			"url":"mc/boybg2.png"
+		},
+		{
+			"name":"diaomao1_png",
+			"type":"image",
+			"url":"mc/diaomao1.png"
+		},
+		{
+			"name":"diaomao2_png",
+			"type":"image",
+			"url":"mc/diaomao2.png"
+		},
+		{
+			"name":"diaomao3_png",
+			"type":"image",
+			"url":"mc/diaomao3.png"
+		},
+		{
+			"name":"diaomao4_png",
+			"type":"image",
+			"url":"mc/diaomao4.png"
+		},
+		{
+			"name":"girlback1_png",
+			"type":"image",
+			"url":"mc/girlback1.png"
+		},
+		{
+			"name":"girlback2_png",
+			"type":"image",
+			"url":"mc/girlback2.png"
+		},
+		{
+			"name":"jie1_png",
+			"type":"image",
+			"url":"mc/jie1.png"
+		},
+		{
+			"name":"jie2_png",
+			"type":"image",
+			"url":"mc/jie2.png"
+		},
+		{
+			"name":"jie3_png",
+			"type":"image",
+			"url":"mc/jie3.png"
+		},
+		{
+			"name":"jie4_png",
+			"type":"image",
+			"url":"mc/jie4.png"
+		},
+		{
+			"name":"shengbing1_png",
+			"type":"image",
+			"url":"mc/shengbing1.png"
+		},
+		{
+			"name":"shengbing2_png",
+			"type":"image",
+			"url":"mc/shengbing2.png"
+		},
+		{
+			"name":"shengbing3_png",
+			"type":"image",
+			"url":"mc/shengbing3.png"
+		},
+		{
+			"name":"shengbing4_png",
+			"type":"image",
+			"url":"mc/shengbing4.png"
+		},
+		{
+			"name":"mc_json",
+			"type":"json",
+			"url":"mc/mc.json"
+		},
+		{
+			"name":"mc_png",
+			"type":"image",
+			"url":"mc/mc.png"
+		},
+		{
+			"name":"loading2_png",
+			"type":"image",
+			"url":"img/loading2.png"
+		},
+		{
+			"name":"loadingbg_jpg",
+			"type":"image",
+			"url":"img/loadingbg.jpg"
+		},
+		{
+			"name":"p4_11_png",
+			"type":"image",
+			"url":"img/p4_11.png"
+		},
+		{
+			"name":"p4_11_1_png",
+			"type":"image",
+			"url":"img/p4_11_1.png"
+		},
+		{
+			"name":"plot1_jpg",
+			"type":"image",
+			"url":"img/plot1.jpg"
+		},
+		{
+			"name":"plot2_jpg",
+			"type":"image",
+			"url":"img/plot2.jpg"
+		},
+		{
+			"name":"plot3_jpg",
+			"type":"image",
+			"url":"img/plot3.jpg"
 		}
 	]
 }

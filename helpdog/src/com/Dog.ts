@@ -4,6 +4,7 @@
  *
  */
 class Dog extends egret.Sprite{
+    //jie,shengbing,diaomao
     public type:string;
     //
     private mc:egret.MovieClip;
@@ -17,6 +18,7 @@ class Dog extends egret.Sprite{
         this.mc.gotoAndPlay("run",-1);
     }
     public sit(): void {
+        this.mc.scaleX = 1;
         this.mc.gotoAndPlay("sit",-1);
     }
     

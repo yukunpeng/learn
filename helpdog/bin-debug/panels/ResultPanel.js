@@ -11,6 +11,7 @@ var ResultPanel = (function (_super) {
     }
     var d = __define,c=ResultPanel,p=c.prototype;
     p.resetPanel = function (usedTime) {
+        console.log(usedTime);
         if (usedTime <= this.winTime) {
             this["winTf"].visible = true;
         }
