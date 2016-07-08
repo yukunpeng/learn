@@ -29,7 +29,6 @@ class GamePanel extends PanelBase{
     
     //重置游戏
     public resetGame():void{
-        
         this.score=0;
         //狗粮的位置
         this["food"].y = this.foodY;
@@ -97,6 +96,8 @@ class GamePanel extends PanelBase{
     }
     
     private behit(dog:Dog,i:number):void{
+        //this.gameOver();
+        //return;
         this.score++;
         //汪星人饥饿值降低
         dog.hungry--;

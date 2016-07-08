@@ -11,6 +11,8 @@ var ResultPanel = (function (_super) {
     }
     var d = __define,c=ResultPanel,p=c.prototype;
     p.resetPanel = function (usedTime, score) {
+        //usedTime=0;
+        //score=9;
         console.log("time:" + usedTime + ",score:" + score);
         var str = "";
         if (score < 9) {
@@ -49,7 +51,10 @@ var ResultPanel = (function (_super) {
             //游戏胜利
             this["failGroup"].visible = false;
             this["winGroup"].visible = true;
-            var force = 99 - (usedTime - 9) * 2;
+            var force = 99;
+            if (usedTime >= 9) {
+                force = 99 - (usedTime - 9) * 2;
+            }
             str = "你爆发了" + force + "%的爱宠力量。";
             //胜利文字
             this["winTf"].text = str;

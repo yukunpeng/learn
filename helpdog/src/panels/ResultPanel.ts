@@ -8,6 +8,8 @@ class ResultPanel extends PanelBase{
     
     
     public resetPanel(usedTime:number,score:number):void{
+        //usedTime=0;
+        //score=9;
         console.log("time:"+usedTime+",score:"+score);
         var str: string = "";
         
@@ -46,7 +48,10 @@ class ResultPanel extends PanelBase{
             //游戏胜利
             this["failGroup"].visible = false;
             this["winGroup"].visible = true;
-            var force:number=99-(usedTime-9)*2;
+            var force: number=99;
+            if(usedTime>=9){
+                force = 99 - (usedTime - 9) * 2;
+            }
             str = "你爆发了"+force+"%的爱宠力量。";
             //胜利文字
             this["winTf"].text = str;

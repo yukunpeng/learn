@@ -97,6 +97,8 @@ var GamePanel = (function (_super) {
         }
     };
     p.behit = function (dog, i) {
+        //this.gameOver();
+        //return;
         this.score++;
         //汪星人饥饿值降低
         dog.hungry--;
