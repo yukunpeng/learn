@@ -35,7 +35,7 @@ class GamePanel extends PanelBase{
         //timer
         this.timer.reset();
         this.timer.start();
-        this["timerTf"].text=this.totalTime;
+        this["timerTf"].text=this.totalTime+" S";
         //三只汪的位置
         this.dogArr = [this.shengbingDog,this.jieDog,this.diaomaoDog];
         for(var i:number=0;i<3;i++){
@@ -100,7 +100,7 @@ class GamePanel extends PanelBase{
         //return;
         this.score++;
         //汪星人饥饿值降低
-        dog.hungry--;
+        dog.hit();
         if(dog.hungry <= 0) {
             //喂饱一只汪
             egret.Tween.removeTweens(dog);
@@ -148,6 +148,8 @@ class GamePanel extends PanelBase{
         this.man.x = 320;
         this.man.y = 960;
         this.addChild(this.man);
+        this.man.touchEnabled=true;
+        this.man.addEventListener(egret.TouchEvent.TOUCH_TAP,this.shoot,this);
     	   //初始化timer
     	   this.timer=new egret.Timer(1000,this.totalTime);
         this.timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE,this.timerCom,this);
@@ -160,23 +162,17 @@ class GamePanel extends PanelBase{
         this.addChild(this.shengbingDog);
         this.addChild(this.diaomaoDog);
     }
+    
 
     //倒计时结束
     private onTimer(e: egret.TimerEvent): void {
-        this["timerTf"].text = this.timer.repeatCount-this.timer.currentCount;
+        this["timerTf"].text = this.timer.repeatCount-this.timer.currentCount+" S";
     }
     //倒计时结束
     private timerCom(e: egret.TimerEvent): void {
         this.gameOver();
     }
     
-    public onTouch(e: egret.TouchEvent): void {
-        switch(e.target){
-            case this["food"]:
-                this.shoot();
-                break;
-        }
-    }
     
     private shoot():void{
         //角色扔食物动画

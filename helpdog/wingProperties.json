@@ -248,6 +248,36 @@
 					"isFolder":false,
 					"key":"plot3_jpg",
 					"name":"plot3_jpg"
+				},
+				{
+					"isFolder":false,
+					"key":"jump_png",
+					"name":"jump_png"
+				},
+				{
+					"isFolder":false,
+					"key":"pre_png",
+					"name":"pre_png"
+				},
+				{
+					"isFolder":false,
+					"key":"clock_png",
+					"name":"clock_png"
+				},
+				{
+					"isFolder":false,
+					"key":"diaomaofood_png",
+					"name":"diaomaofood_png"
+				},
+				{
+					"isFolder":false,
+					"key":"jiefood_png",
+					"name":"jiefood_png"
+				},
+				{
+					"isFolder":false,
+					"key":"shengbingfood_png",
+					"name":"shengbingfood_png"
 				}
 			]
 		}

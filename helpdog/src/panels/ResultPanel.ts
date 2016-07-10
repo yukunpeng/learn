@@ -8,9 +8,6 @@ class ResultPanel extends PanelBase{
     
     
     public resetPanel(usedTime:number,score:number):void{
-        //usedTime=0;
-        //score=9;
-        console.log("time:"+usedTime+",score:"+score);
         var str: string = "";
         
         if(score<9){
@@ -37,10 +34,10 @@ class ResultPanel extends PanelBase{
                     str = "恭喜你，打败了51%的网友";
                     break;
                 case 7:
-                    str = "恭喜你，打败了45%的网友";
+                    str = "恭喜你，打败了53%的网友";
                     break;
                 case 8:
-                    str = "恭喜你，打败了47%的网友";
+                    str = "恭喜你，打败了55%的网友";
                     break;
             }
             this["failTf"].text=str;
@@ -63,8 +60,10 @@ class ResultPanel extends PanelBase{
                 this["dogPic"].texture = RES.getRes("chayidian_png");
             } else if(usedTime <= 23) {
                 this["dogPic"].texture = RES.getRes("jiayouba_png");
-            } else{
+            } else if(usedTime <= 28) {
                 this["dogPic"].texture = RES.getRes("huihuoxing_png");
+            } else{
+                this["dogPic"].texture = RES.getRes("buguanxin_png");
             }
         }
     }

@@ -11,9 +11,6 @@ var ResultPanel = (function (_super) {
     }
     var d = __define,c=ResultPanel,p=c.prototype;
     p.resetPanel = function (usedTime, score) {
-        //usedTime=0;
-        //score=9;
-        console.log("time:" + usedTime + ",score:" + score);
         var str = "";
         if (score < 9) {
             //游戏失败
@@ -39,10 +36,10 @@ var ResultPanel = (function (_super) {
                     str = "恭喜你，打败了51%的网友";
                     break;
                 case 7:
-                    str = "恭喜你，打败了45%的网友";
+                    str = "恭喜你，打败了53%的网友";
                     break;
                 case 8:
-                    str = "恭喜你，打败了47%的网友";
+                    str = "恭喜你，打败了55%的网友";
                     break;
             }
             this["failTf"].text = str;
@@ -69,8 +66,11 @@ var ResultPanel = (function (_super) {
             else if (usedTime <= 23) {
                 this["dogPic"].texture = RES.getRes("jiayouba_png");
             }
-            else {
+            else if (usedTime <= 28) {
                 this["dogPic"].texture = RES.getRes("huihuoxing_png");
+            }
+            else {
+                this["dogPic"].texture = RES.getRes("buguanxin_png");
             }
         }
     };

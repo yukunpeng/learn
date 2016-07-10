@@ -21,6 +21,8 @@ var GamePanel = (function (_super) {
         this.man.x = 320;
         this.man.y = 960;
         this.addChild(this.man);
+        this.man.touchEnabled = true;
+        this.man.addEventListener(egret.TouchEvent.TOUCH_TAP, this.shoot, this);
         //初始化timer
         this.timer = new egret.Timer(1000, this.totalTime);
         this.timer.addEventListener(egret.TimerEvent.TIMER_COMPLETE, this.timerCom, this);
@@ -42,7 +44,7 @@ var GamePanel = (function (_super) {
         //timer
         this.timer.reset();
         this.timer.start();
-        this["timerTf"].text = this.totalTime;
+        this["timerTf"].text = this.totalTime + " S";
         //三只汪的位置
         this.dogArr = [this.shengbingDog, this.jieDog, this.diaomaoDog];
         for (var i = 0; i < 3; i++) {
@@ -101,7 +103,7 @@ var GamePanel = (function (_super) {
         //return;
         this.score++;
         //汪星人饥饿值降低
-        dog.hungry--;
+        dog.hit();
         if (dog.hungry <= 0) {
             //喂饱一只汪
             egret.Tween.removeTweens(dog);
@@ -141,18 +143,11 @@ var GamePanel = (function (_super) {
     };
     //倒计时结束
     p.onTimer = function (e) {
-        this["timerTf"].text = this.timer.repeatCount - this.timer.currentCount;
+        this["timerTf"].text = this.timer.repeatCount - this.timer.currentCount + " S";
     };
     //倒计时结束
     p.timerCom = function (e) {
         this.gameOver();
-    };
-    p.onTouch = function (e) {
-        switch (e.target) {
-            case this["food"]:
-                this.shoot();
-                break;
-        }
     };
     p.shoot = function () {
         //角色扔食物动画

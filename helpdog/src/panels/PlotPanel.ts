@@ -10,6 +10,9 @@ class PlotPanel extends PanelBase{
 	public constructor() {
     	   super("src/panels/PlotPanelSkin.exml");
         this.pos=0;
+        egret.Tween.get(this["preBtn"],{"loop":true})
+          .to({"scaleX":0.9,"scaleY":0.9},500)
+          .to({ "scaleX": 1,"scaleY": 1 },500);
     }
     
     public onTouch(e: egret.TouchEvent): void {
@@ -23,7 +26,7 @@ class PlotPanel extends PanelBase{
                 if(this.pos == -1) {
                     this.pos = 0;
                 }
-                this["plotPic"].texture = RES.getRes(this.plotArr[this.pos]);
+                egret.Tween.get(this["plotGroup"]).to({"x":-this.pos*640},300);
                 break;
             default:
                 this.pos++;
@@ -31,7 +34,7 @@ class PlotPanel extends PanelBase{
                     Main.ins.removeChild(this);
                     Main.ins.addChild(RolePanel.getIns());
                 }else{
-                    this["plotPic"].texture = RES.getRes(this.plotArr[this.pos]);
+                    egret.Tween.get(this["plotGroup"]).to({ "x": -this.pos * 640 },300);
                 }
                 break;
         }

@@ -9,6 +9,9 @@ var PlotPanel = (function (_super) {
         _super.call(this, "src/panels/PlotPanelSkin.exml");
         this.plotArr = ["plot1_jpg", "plot2_jpg", "plot3_jpg"];
         this.pos = 0;
+        egret.Tween.get(this["preBtn"], { "loop": true })
+            .to({ "scaleX": 0.9, "scaleY": 0.9 }, 500)
+            .to({ "scaleX": 1, "scaleY": 1 }, 500);
     }
     var d = __define,c=PlotPanel,p=c.prototype;
     p.onTouch = function (e) {
@@ -22,7 +25,7 @@ var PlotPanel = (function (_super) {
                 if (this.pos == -1) {
                     this.pos = 0;
                 }
-                this["plotPic"].texture = RES.getRes(this.plotArr[this.pos]);
+                egret.Tween.get(this["plotGroup"]).to({ "x": -this.pos * 640 }, 300);
                 break;
             default:
                 this.pos++;
@@ -31,7 +34,7 @@ var PlotPanel = (function (_super) {
                     Main.ins.addChild(RolePanel.getIns());
                 }
                 else {
-                    this["plotPic"].texture = RES.getRes(this.plotArr[this.pos]);
+                    egret.Tween.get(this["plotGroup"]).to({ "x": -this.pos * 640 }, 300);
                 }
                 break;
         }
