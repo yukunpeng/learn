@@ -12,9 +12,11 @@ var RolePanel = (function (_super) {
     p.onTouch = function (e) {
         switch (e.target) {
             case this["manNormalBtn"]:
+                SoundManager.playBegin();
                 this.select("boy");
                 break;
             case this["girlNormalBtn"]:
+                SoundManager.playBegin();
                 this.select("girl");
                 break;
             case this["beginBtn"]:

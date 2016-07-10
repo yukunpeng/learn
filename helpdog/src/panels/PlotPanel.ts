@@ -16,6 +16,7 @@ class PlotPanel extends PanelBase{
     }
     
     public onTouch(e: egret.TouchEvent): void {
+        SoundManager.playBegin();
         switch(e.target){
             case this["jumpBtn"]:
                 Main.ins.removeChild(this);

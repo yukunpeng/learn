@@ -40,6 +40,7 @@ var Dog = (function (_super) {
     var d = __define,c=Dog,p=c.prototype;
     //打击dog
     p.hit = function () {
+        SoundManager.playHurt();
         this.tipArr[this.hungry - 1].visible = false;
         this.hungry--;
     };

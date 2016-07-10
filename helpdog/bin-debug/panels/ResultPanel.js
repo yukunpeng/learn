@@ -13,6 +13,7 @@ var ResultPanel = (function (_super) {
     p.resetPanel = function (usedTime, score) {
         var str = "";
         if (score < 9) {
+            SoundManager.playFail();
             //游戏失败
             this["failGroup"].visible = true;
             this["winGroup"].visible = false;
@@ -45,6 +46,7 @@ var ResultPanel = (function (_super) {
             this["failTf"].text = str;
         }
         else {
+            SoundManager.playWin();
             //游戏胜利
             this["failGroup"].visible = false;
             this["winGroup"].visible = true;
@@ -77,11 +79,13 @@ var ResultPanel = (function (_super) {
     p.onTouch = function (e) {
         switch (e.target) {
             case this["cancelBtn"]:
+                SoundManager.playBegin();
                 Main.ins.removeChild(this);
                 Main.ins.addChild(GamePanel.getIns());
                 GamePanel.getIns().resetGame();
                 break;
             case this["shareBtn"]:
+                SoundManager.playBegin();
                 Main.ins.addChild(SharePanel.getIns());
                 break;
         }

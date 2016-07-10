@@ -14,9 +14,11 @@ class RolePanel extends PanelBase{
     public onTouch(e: egret.TouchEvent): void {
         switch(e.target) {
             case this["manNormalBtn"]:
+                SoundManager.playBegin();
                 this.select("boy");
                 break; 
             case this["girlNormalBtn"]:
+                SoundManager.playBegin();
                 this.select("girl");
                 break;
             case this["beginBtn"]:

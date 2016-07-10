@@ -11,6 +11,7 @@ class SharePanel extends PanelBase{
 	}
 	
     public onTouch(e: egret.TouchEvent): void {
+        SoundManager.playBegin();
         Main.ins.removeChild(this);
     }
 	

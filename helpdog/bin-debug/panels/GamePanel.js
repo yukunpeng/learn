@@ -150,6 +150,7 @@ var GamePanel = (function (_super) {
         this.gameOver();
     };
     p.shoot = function () {
+        SoundManager.playBegin();
         //角色扔食物动画
         this.man.plit();
         //食物飞出去

@@ -11,6 +11,7 @@ class ResultPanel extends PanelBase{
         var str: string = "";
         
         if(score<9){
+            SoundManager.playFail();
             //游戏失败
             this["failGroup"].visible=true;
             this["winGroup"].visible = false;
@@ -42,6 +43,7 @@ class ResultPanel extends PanelBase{
             }
             this["failTf"].text=str;
         }else{
+            SoundManager.playWin();
             //游戏胜利
             this["failGroup"].visible = false;
             this["winGroup"].visible = true;
@@ -75,11 +77,13 @@ class ResultPanel extends PanelBase{
     public onTouch(e: egret.TouchEvent): void {
         switch(e.target) {
             case this["cancelBtn"]:
+                SoundManager.playBegin();
                 Main.ins.removeChild(this);
                 Main.ins.addChild(GamePanel.getIns());
                 GamePanel.getIns().resetGame();
                 break;
             case this["shareBtn"]:
+                SoundManager.playBegin();
                 Main.ins.addChild(SharePanel.getIns());
                 break;
         }

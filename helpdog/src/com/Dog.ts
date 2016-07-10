@@ -15,7 +15,7 @@ class Dog extends egret.Sprite{
     
     //打击dog
     public hit():void{
-        
+        SoundManager.playHurt();
         this.tipArr[this.hungry-1].visible = false;
         this.hungry--;
     }

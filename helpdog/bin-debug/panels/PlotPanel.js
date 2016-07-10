@@ -15,6 +15,7 @@ var PlotPanel = (function (_super) {
     }
     var d = __define,c=PlotPanel,p=c.prototype;
     p.onTouch = function (e) {
+        SoundManager.playBegin();
         switch (e.target) {
             case this["jumpBtn"]:
                 Main.ins.removeChild(this);

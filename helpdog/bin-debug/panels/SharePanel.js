@@ -10,6 +10,7 @@ var SharePanel = (function (_super) {
     }
     var d = __define,c=SharePanel,p=c.prototype;
     p.onTouch = function (e) {
+        SoundManager.playBegin();
         Main.ins.removeChild(this);
     };
     SharePanel.getIns = function () {
