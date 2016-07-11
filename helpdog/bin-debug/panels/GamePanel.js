@@ -168,3 +168,4 @@ var GamePanel = (function (_super) {
     return GamePanel;
 }(PanelBase));
 egret.registerClass(GamePanel,'GamePanel');
+//# sourceMappingURL=GamePanel.js.map

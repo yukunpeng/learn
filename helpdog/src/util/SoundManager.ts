@@ -7,6 +7,18 @@ class SoundManager {
     private static hurt: egret.Sound;
     private static fail: egret.Sound;
     private static win: egret.Sound;
+    private static dog1: egret.Sound;
+    private static dog2: egret.Sound;
+    private static dog3: egret.Sound;
+    
+    
+    //播放失败音乐
+    public static playDog1(pos:number): void {
+        if(!SoundManager.fail) {
+            SoundManager.fail = RES.getRes("fail_mp3");
+        }
+        SoundManager.fail.play(0,1);
+    }
     
     //播放失败音乐
     public static playFail(): void {

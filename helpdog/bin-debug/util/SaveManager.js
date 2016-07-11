@@ -22,3 +22,4 @@ var SaveManager = (function () {
     return SaveManager;
 }());
 egret.registerClass(SaveManager,'SaveManager');
+//# sourceMappingURL=SaveManager.js.map

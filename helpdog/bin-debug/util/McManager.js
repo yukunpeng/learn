@@ -36,3 +36,4 @@ var McManager = (function () {
     return McManager;
 }());
 egret.registerClass(McManager,'McManager');
+//# sourceMappingURL=McManager.js.map

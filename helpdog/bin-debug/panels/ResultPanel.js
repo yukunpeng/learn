@@ -99,3 +99,4 @@ var ResultPanel = (function (_super) {
     return ResultPanel;
 }(PanelBase));
 egret.registerClass(ResultPanel,'ResultPanel');
+//# sourceMappingURL=ResultPanel.js.map

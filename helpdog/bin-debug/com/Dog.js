@@ -66,3 +66,4 @@ var Dog = (function (_super) {
     return Dog;
 }(egret.Sprite));
 egret.registerClass(Dog,'Dog');
+//# sourceMappingURL=Dog.js.map

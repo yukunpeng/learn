@@ -6,6 +6,13 @@ var SoundManager = (function () {
     }
     var d = __define,c=SoundManager,p=c.prototype;
     //播放失败音乐
+    SoundManager.playDog1 = function (pos) {
+        if (!SoundManager.fail) {
+            SoundManager.fail = RES.getRes("fail_mp3");
+        }
+        SoundManager.fail.play(0, 1);
+    };
+    //播放失败音乐
     SoundManager.playFail = function () {
         if (!SoundManager.fail) {
             SoundManager.fail = RES.getRes("fail_mp3");
@@ -48,3 +55,4 @@ var SoundManager = (function () {
     return SoundManager;
 }());
 egret.registerClass(SoundManager,'SoundManager');
+//# sourceMappingURL=SoundManager.js.map
