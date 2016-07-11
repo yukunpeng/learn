@@ -5,12 +5,23 @@ var SoundManager = (function () {
     function SoundManager() {
     }
     var d = __define,c=SoundManager,p=c.prototype;
-    //播放失败音乐
-    SoundManager.playDog1 = function (pos) {
-        if (!SoundManager.fail) {
-            SoundManager.fail = RES.getRes("fail_mp3");
+    SoundManager.playDog3 = function () {
+        if (!SoundManager.dog3) {
+            SoundManager.dog3 = RES.getRes("dog3_mp3");
         }
-        SoundManager.fail.play(0, 1);
+        SoundManager.dog3.play(0, 1);
+    };
+    SoundManager.playDog2 = function () {
+        if (!SoundManager.dog2) {
+            SoundManager.dog2 = RES.getRes("dog2_mp3");
+        }
+        SoundManager.dog2.play(0, 1);
+    };
+    SoundManager.playDog1 = function () {
+        if (!SoundManager.dog1) {
+            SoundManager.dog1 = RES.getRes("dog1_mp3");
+        }
+        SoundManager.dog1.play(0, 1);
     };
     //播放失败音乐
     SoundManager.playFail = function () {
@@ -40,13 +51,6 @@ var SoundManager = (function () {
         }
         SoundManager.begin.play(0, 1);
     };
-    //播放受伤音乐
-    SoundManager.playHurt = function () {
-        if (!SoundManager.hurt) {
-            SoundManager.hurt = RES.getRes("hurt_mp3");
-        }
-        SoundManager.hurt.play(0, 1);
-    };
     //播放背景音乐
     SoundManager.playBg = function () {
         var bg = RES.getRes("water_mp3");
@@ -55,4 +59,3 @@ var SoundManager = (function () {
     return SoundManager;
 }());
 egret.registerClass(SoundManager,'SoundManager');
-//# sourceMappingURL=SoundManager.js.map

@@ -40,7 +40,17 @@ var Dog = (function (_super) {
     var d = __define,c=Dog,p=c.prototype;
     //打击dog
     p.hit = function () {
-        SoundManager.playHurt();
+        switch (this.type) {
+            case "jie":
+                SoundManager.playDog1();
+                break;
+            case "shengbing":
+                SoundManager.playDog2();
+                break;
+            case "diaomao":
+                SoundManager.playDog3();
+                break;
+        }
         this.tipArr[this.hungry - 1].visible = false;
         this.hungry--;
     };
@@ -66,4 +76,3 @@ var Dog = (function (_super) {
     return Dog;
 }(egret.Sprite));
 egret.registerClass(Dog,'Dog');
-//# sourceMappingURL=Dog.js.map

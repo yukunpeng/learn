@@ -15,7 +15,18 @@ class Dog extends egret.Sprite{
     
     //打击dog
     public hit():void{
-        SoundManager.playHurt();
+        switch(this.type){
+            case "jie":
+                SoundManager.playDog1();
+                break;
+            case "shengbing":
+                SoundManager.playDog2();
+                break;
+            case "diaomao":
+                SoundManager.playDog3();
+                break;
+        }
+        
         this.tipArr[this.hungry-1].visible = false;
         this.hungry--;
     }

@@ -11,11 +11,6 @@
 			"children":[
 				{
 					"isFolder":false,
-					"key":"boy_jpg",
-					"name":"boy_jpg"
-				},
-				{
-					"isFolder":false,
 					"key":"girl_jpg",
 					"name":"girl_jpg"
 				},
@@ -213,16 +208,6 @@
 					"isFolder":false,
 					"key":"mc_png",
 					"name":"mc_png"
-				},
-				{
-					"isFolder":false,
-					"key":"loading2_png",
-					"name":"loading2_png"
-				},
-				{
-					"isFolder":false,
-					"key":"loadingbg_jpg",
-					"name":"loadingbg_jpg"
 				},
 				{
 					"isFolder":false,

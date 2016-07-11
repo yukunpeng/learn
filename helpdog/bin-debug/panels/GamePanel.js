@@ -12,7 +12,7 @@ var GamePanel = (function (_super) {
         this.rightX = 540;
         this.leftX = 100;
         //狗狗初始y坐标
-        this.yArr = [128, 276, 444];
+        this.yArr = [158, 306, 474];
         this.dogTime = 2000;
         this.foodTime = 500;
         this.foodY = 660;
@@ -115,7 +115,7 @@ var GamePanel = (function (_super) {
                     break;
                 case "jie":
                     dog.x = 265;
-                    dog.y = 930;
+                    dog.y = 934;
                     break;
                 case "diaomao":
                     dog.x = 205;
@@ -128,7 +128,7 @@ var GamePanel = (function (_super) {
                 //食物动画停止
                 egret.Tween.removeTweens(this["food"]);
                 //游戏结束
-                egret.Tween.get(this).wait(1000).call(this.gameOver, this);
+                egret.Tween.get(this).wait(500).call(this.gameOver, this);
             }
         }
         //实物归位
@@ -168,4 +168,3 @@ var GamePanel = (function (_super) {
     return GamePanel;
 }(PanelBase));
 egret.registerClass(GamePanel,'GamePanel');
-//# sourceMappingURL=GamePanel.js.map

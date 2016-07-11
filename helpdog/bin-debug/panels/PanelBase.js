@@ -16,4 +16,3 @@ var PanelBase = (function (_super) {
     return PanelBase;
 }(eui.Component));
 egret.registerClass(PanelBase,'PanelBase');
-//# sourceMappingURL=PanelBase.js.map

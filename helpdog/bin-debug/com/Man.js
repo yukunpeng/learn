@@ -29,4 +29,3 @@ var Man = (function (_super) {
     return Man;
 }(egret.Sprite));
 egret.registerClass(Man,'Man');
-//# sourceMappingURL=Man.js.map

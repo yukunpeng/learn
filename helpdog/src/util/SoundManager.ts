@@ -12,12 +12,24 @@ class SoundManager {
     private static dog3: egret.Sound;
     
     
-    //播放失败音乐
-    public static playDog1(pos:number): void {
-        if(!SoundManager.fail) {
-            SoundManager.fail = RES.getRes("fail_mp3");
+    
+    public static playDog3(): void {
+        if(!SoundManager.dog3) {
+            SoundManager.dog3 = RES.getRes("dog3_mp3");
         }
-        SoundManager.fail.play(0,1);
+        SoundManager.dog3.play(0,1);
+    }
+    public static playDog2(): void {
+        if(!SoundManager.dog2) {
+            SoundManager.dog2 = RES.getRes("dog2_mp3");
+        }
+        SoundManager.dog2.play(0,1);
+    }
+    public static playDog1(): void {
+        if(!SoundManager.dog1) {
+            SoundManager.dog1 = RES.getRes("dog1_mp3");
+        }
+        SoundManager.dog1.play(0,1);
     }
     
     //播放失败音乐
@@ -47,13 +59,6 @@ class SoundManager {
             SoundManager.begin = RES.getRes("begin_mp3");
         }
         SoundManager.begin.play(0,1);
-    }
-    //播放受伤音乐
-    public static playHurt(): void {
-        if(!SoundManager.hurt) {
-            SoundManager.hurt = RES.getRes("hurt_mp3");
-        }
-        SoundManager.hurt.play(0,1);
     }
 
 

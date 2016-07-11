@@ -49,4 +49,3 @@ var PlotPanel = (function (_super) {
     return PlotPanel;
 }(PanelBase));
 egret.registerClass(PlotPanel,'PlotPanel');
-//# sourceMappingURL=PlotPanel.js.map

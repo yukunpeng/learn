@@ -1,34 +1,19 @@
 {
 	"groups":[
 		{
-			"keys":"loading2_png,loadingbg_jpg,p4_11_png,p4_11_1_png",
+			"keys":"p4_11_png,p4_11_1_png",
 			"name":"preload"
 		},
 		{
-			"keys":"water_mp3,begin_mp3,hurt_mp3,run_mp3,fail_mp3,smallnum_fnt,win_mp3,plot_json,boy_jpg,girl_jpg,boy_png,girl_png,girlselect_png,manselect_png,selectbg_png,selectbtn_png,selectfront_png,tipselectbtn_png,title_png,buguanxin_png,chayidian_png,food_png,gamebg_png,housailei_png,huihuoxing_png,jiayouba_png,rehelpdown_png,rehelpup_png,resultbg_png,sharedog_png,sharedown_png,shareup_png,boybg1_png,boybg2_png,diaomao1_png,diaomao2_png,diaomao3_png,diaomao4_png,girlback1_png,girlback2_png,jie1_png,jie2_png,jie3_png,jie4_png,shengbing1_png,shengbing2_png,shengbing3_png,shengbing4_png,mc_json,mc_png,plot1_jpg,plot2_jpg,plot3_jpg,jump_png,pre_png,clock_png,diaomaofood_png,jiefood_png,shengbingfood_png",
+			"keys":"begin_mp3,fail_mp3,win_mp3,girl_jpg,boy_png,girl_png,girlselect_png,manselect_png,selectbg_png,selectbtn_png,selectfront_png,tipselectbtn_png,title_png,buguanxin_png,chayidian_png,food_png,gamebg_png,housailei_png,huihuoxing_png,jiayouba_png,rehelpdown_png,rehelpup_png,resultbg_png,sharedog_png,sharedown_png,shareup_png,boybg1_png,boybg2_png,diaomao1_png,diaomao2_png,diaomao3_png,diaomao4_png,girlback1_png,girlback2_png,jie1_png,jie2_png,jie3_png,jie4_png,shengbing1_png,shengbing2_png,shengbing3_png,shengbing4_png,mc_json,mc_png,plot1_jpg,plot2_jpg,plot3_jpg,jump_png,pre_png,clock_png,diaomaofood_png,jiefood_png,shengbingfood_png,dog1_mp3,dog2_mp3,dog3_mp3",
 			"name":"game"
 		}
 	],
 	"resources":[
 		{
-			"name":"water_mp3",
-			"type":"sound",
-			"url":"sound/water.mp3"
-		},
-		{
 			"name":"begin_mp3",
 			"type":"sound",
 			"url":"sound/begin.mp3"
-		},
-		{
-			"name":"hurt_mp3",
-			"type":"sound",
-			"url":"sound/hurt.mp3"
-		},
-		{
-			"name":"run_mp3",
-			"type":"sound",
-			"url":"sound/run.mp3"
 		},
 		{
 			"name":"fail_mp3",
@@ -36,24 +21,9 @@
 			"url":"sound/fail.mp3"
 		},
 		{
-			"name":"smallnum_fnt",
-			"type":"font",
-			"url":"num/smallnum.fnt"
-		},
-		{
 			"name":"win_mp3",
 			"type":"sound",
 			"url":"sound/win.mp3"
-		},
-		{
-			"name":"plot_json",
-			"type":"json",
-			"url":"json/plot.json"
-		},
-		{
-			"name":"boy_jpg",
-			"type":"image",
-			"url":"img/boy.jpg"
 		},
 		{
 			"name":"girl_jpg",
@@ -261,16 +231,6 @@
 			"url":"mc/mc.png"
 		},
 		{
-			"name":"loading2_png",
-			"type":"image",
-			"url":"img/loading2.png"
-		},
-		{
-			"name":"loadingbg_jpg",
-			"type":"image",
-			"url":"img/loadingbg.jpg"
-		},
-		{
 			"name":"p4_11_png",
 			"type":"image",
 			"url":"img/p4_11.png"
@@ -324,6 +284,21 @@
 			"name":"shengbingfood_png",
 			"type":"image",
 			"url":"img/shengbingfood.png"
+		},
+		{
+			"name":"dog1_mp3",
+			"type":"sound",
+			"url":"sound/dog1.mp3"
+		},
+		{
+			"name":"dog2_mp3",
+			"type":"sound",
+			"url":"sound/dog2.mp3"
+		},
+		{
+			"name":"dog3_mp3",
+			"type":"sound",
+			"url":"sound/dog3.mp3"
 		}
 	]
 }

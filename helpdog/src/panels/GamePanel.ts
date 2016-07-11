@@ -13,7 +13,7 @@ class GamePanel extends PanelBase{
     private rightX: number=540;
     private leftX: number=100;
     //狗狗初始y坐标
-    private yArr: number[] = [128,276,444];
+    private yArr: number[] = [158,306,474];
     //三只汪
     private shengbingDog: Dog;
     private jieDog: Dog;
@@ -112,7 +112,7 @@ class GamePanel extends PanelBase{
                     break;
                case "jie":
                    dog.x = 265;
-                   dog.y = 930;
+                   dog.y = 934;
                    break;
                 case "diaomao":
                     dog.x = 205;
@@ -125,7 +125,7 @@ class GamePanel extends PanelBase{
                 //食物动画停止
                 egret.Tween.removeTweens(this["food"]);
                 //游戏结束
-                egret.Tween.get(this).wait(1000).call(this.gameOver,this);
+                egret.Tween.get(this).wait(500).call(this.gameOver,this);
             }
         }
         //实物归位

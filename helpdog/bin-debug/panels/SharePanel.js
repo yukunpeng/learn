@@ -22,4 +22,3 @@ var SharePanel = (function (_super) {
     return SharePanel;
 }(PanelBase));
 egret.registerClass(SharePanel,'SharePanel');
-//# sourceMappingURL=SharePanel.js.map

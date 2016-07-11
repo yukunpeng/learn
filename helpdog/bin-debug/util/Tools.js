@@ -15,4 +15,3 @@ var Tools = (function () {
     return Tools;
 }());
 egret.registerClass(Tools,'Tools');
-//# sourceMappingURL=Tools.js.map

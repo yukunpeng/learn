@@ -20,4 +20,3 @@ var WaterPanel = (function (_super) {
     return WaterPanel;
 }(PanelBase));
 egret.registerClass(WaterPanel,'WaterPanel');
-//# sourceMappingURL=WaterPanel.js.map
