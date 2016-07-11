@@ -7,7 +7,7 @@ var LoadPanel = (function (_super) {
     __extends(LoadPanel, _super);
     function LoadPanel() {
         _super.call(this, "src/panels/LoadPanelSkin.exml");
-        this["proTxt"].text = "%22222";
+        this["proTxt"].text = "0%";
     }
     var d = __define,c=LoadPanel,p=c.prototype;
     p.setPro = function (cur, total) {

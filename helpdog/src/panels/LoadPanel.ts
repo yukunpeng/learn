@@ -16,7 +16,7 @@ class LoadPanel extends PanelBase{
     
 	public constructor() {
     	    super("src/panels/LoadPanelSkin.exml");
-        this["proTxt"].text ="%22222"
+        this["proTxt"].text ="0%"
 	}
 	
     private static ins: LoadPanel;
