@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title>生成二维码</title>
+    <meta charset="utf-8">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            width: 500px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .con{
+            width: 1000px;
+        }
+        .con image{
+            display: block;
+            float: left;
+            border: none;
+            letter-spacing: 0;
+
+        }
+
+    </style>
+    <script src="jquery-2.2.0.js"></script>
+    <script>
+        $(function(){
+            goon();
+        })
+        function goon(){
+            $(".con").css("margin-left","0");
+            $(".con").animate({"margin-left":"-500px"},1000,"linear",goon);
+        }
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <div class="con">
+        <img src="b1.png" alt=""><img src="b1.png" alt="">
+    </div>
+</div>
+</body>
+</html>
