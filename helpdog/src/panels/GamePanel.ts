@@ -20,7 +20,9 @@ class GamePanel extends PanelBase{
     private diaomaoDog: Dog;
     private dogArr:Dog[];
     
-    private dogTime: number = 2000;
+    private dogTime1: number = 3000;
+    private dogTime2: number = 2500;
+    private dogTime3: number = 2000;
     private foodTime: number = 500;
     private foodY:number=660;
     
@@ -46,24 +48,24 @@ class GamePanel extends PanelBase{
                     dog.toRight();
                     //汪跑起来
                     egret.Tween.get(dog,{ loop: true })
-                        .to({ x: this.rightX },this.dogTime).call(this.toRightOver,this,[dog])
-                        .to({ x: this.leftX },this.dogTime).call(this.toLeftOver,this,[dog]);
+                        .to({ x: this.rightX },this.dogTime1).call(this.toRightOver,this,[dog])
+                        .to({ x: this.leftX },this.dogTime1).call(this.toLeftOver,this,[dog]);
                     break;
                 case 1://向左
                     dog.x = this.rightX;
                     dog.toLeft();
                     //汪跑起来
                     egret.Tween.get(dog,{ loop: true })
-                        .to({ x: this.leftX },this.dogTime).call(this.toLeftOver,this,[dog])
-                        .to({ x: this.rightX },this.dogTime).call(this.toRightOver,this,[dog]);
+                        .to({ x: this.leftX },this.dogTime2).call(this.toLeftOver,this,[dog])
+                        .to({ x: this.rightX },this.dogTime2).call(this.toRightOver,this,[dog]);
                     break;
                 case 2://向右
                     dog.x = this.leftX;
                     dog.toRight();
                     //汪跑起来
                     egret.Tween.get(dog,{ loop: true })
-                        .to({ x: this.rightX },this.dogTime).call(this.toRightOver,this,[dog])
-                        .to({ x: this.leftX },this.dogTime).call(this.toLeftOver,this,[dog]);
+                        .to({ x: this.rightX },this.dogTime3).call(this.toRightOver,this,[dog])
+                        .to({ x: this.leftX },this.dogTime3).call(this.toLeftOver,this,[dog]);
                     break;
             }
             

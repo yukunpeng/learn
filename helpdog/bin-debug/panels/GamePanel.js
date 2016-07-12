@@ -13,7 +13,9 @@ var GamePanel = (function (_super) {
         this.leftX = 100;
         //狗狗初始y坐标
         this.yArr = [158, 306, 474];
-        this.dogTime = 2000;
+        this.dogTime1 = 3000;
+        this.dogTime2 = 2500;
+        this.dogTime3 = 2000;
         this.foodTime = 500;
         this.foodY = 660;
         //根据性别生成人物
@@ -55,24 +57,24 @@ var GamePanel = (function (_super) {
                     dog.toRight();
                     //汪跑起来
                     egret.Tween.get(dog, { loop: true })
-                        .to({ x: this.rightX }, this.dogTime).call(this.toRightOver, this, [dog])
-                        .to({ x: this.leftX }, this.dogTime).call(this.toLeftOver, this, [dog]);
+                        .to({ x: this.rightX }, this.dogTime1).call(this.toRightOver, this, [dog])
+                        .to({ x: this.leftX }, this.dogTime1).call(this.toLeftOver, this, [dog]);
                     break;
                 case 1:
                     dog.x = this.rightX;
                     dog.toLeft();
                     //汪跑起来
                     egret.Tween.get(dog, { loop: true })
-                        .to({ x: this.leftX }, this.dogTime).call(this.toLeftOver, this, [dog])
-                        .to({ x: this.rightX }, this.dogTime).call(this.toRightOver, this, [dog]);
+                        .to({ x: this.leftX }, this.dogTime2).call(this.toLeftOver, this, [dog])
+                        .to({ x: this.rightX }, this.dogTime2).call(this.toRightOver, this, [dog]);
                     break;
                 case 2:
                     dog.x = this.leftX;
                     dog.toRight();
                     //汪跑起来
                     egret.Tween.get(dog, { loop: true })
-                        .to({ x: this.rightX }, this.dogTime).call(this.toRightOver, this, [dog])
-                        .to({ x: this.leftX }, this.dogTime).call(this.toLeftOver, this, [dog]);
+                        .to({ x: this.rightX }, this.dogTime3).call(this.toRightOver, this, [dog])
+                        .to({ x: this.leftX }, this.dogTime3).call(this.toLeftOver, this, [dog]);
                     break;
             }
             this.dogArr[i].run();
