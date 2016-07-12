@@ -9,19 +9,26 @@ var McManager = (function () {
     var d = __define,c=McManager,p=c.prototype;
     //获得掉毛汪
     McManager.getDiaomao = function () {
-        return McManager.getMc("diaomao");
+        var mc = McManager.getMc("diaomao");
+        mc.scaleX = mc.scaleY = 0.5;
+        return mc;
     };
     //获得饥饿汪
     McManager.getJie = function () {
-        return McManager.getMc("jie");
+        var mc = McManager.getMc("jie");
+        mc.scaleX = mc.scaleY = 0.5;
+        return mc;
     };
     //获得生病汪
     McManager.getShengbing = function () {
-        return McManager.getMc("shengbing");
+        var mc = McManager.getMc("shengbing");
+        mc.scaleX = mc.scaleY = 0.5;
+        return mc;
     };
     //获得扔狗粮的女孩
     McManager.getGirl = function () {
-        return McManager.getMc("girl");
+        var mc = McManager.getMc("girl");
+        return mc;
     };
     //获得扔狗粮的男孩
     McManager.getBoy = function () {

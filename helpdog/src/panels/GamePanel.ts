@@ -10,8 +10,8 @@ class GamePanel extends PanelBase{
     private totalTime:number=30;
     
     //狗狗初始左右坐标
-    private rightX: number=540;
-    private leftX: number=100;
+    private rightX: number=590;
+    private leftX: number=50;
     //狗狗初始y坐标
     private yArr: number[] = [158,306,474];
     //三只汪
@@ -20,10 +20,10 @@ class GamePanel extends PanelBase{
     private diaomaoDog: Dog;
     private dogArr:Dog[];
     
-    private dogTime1: number = 3000;
-    private dogTime2: number = 2500;
-    private dogTime3: number = 2000;
-    private foodTime: number = 500;
+    private dogTime1: number = 2000;
+    private dogTime2: number = 1500;
+    private dogTime3: number = 1000;
+    private foodTime: number = 2000;
     private foodY:number=660;
     
     private man:Man;
@@ -31,6 +31,7 @@ class GamePanel extends PanelBase{
     
     //重置游戏
     public resetGame():void{
+        this.isShoot=false;
         this.score=0;
         //狗粮的位置
         this["food"].y = this.foodY;
@@ -48,24 +49,24 @@ class GamePanel extends PanelBase{
                     dog.toRight();
                     //汪跑起来
                     egret.Tween.get(dog,{ loop: true })
-                        .to({ x: this.rightX },this.dogTime1).call(this.toRightOver,this,[dog])
-                        .to({ x: this.leftX },this.dogTime1).call(this.toLeftOver,this,[dog]);
+                        .to({ x: this.rightX },this.dogTime1,egret.Ease.quadInOut).call(this.toRightOver,this,[dog]).wait(200)
+                        .to({ x: this.leftX },this.dogTime1,egret.Ease.quadInOut).call(this.toLeftOver,this,[dog]).wait(200);
                     break;
                 case 1://向左
                     dog.x = this.rightX;
                     dog.toLeft();
                     //汪跑起来
                     egret.Tween.get(dog,{ loop: true })
-                        .to({ x: this.leftX },this.dogTime2).call(this.toLeftOver,this,[dog])
-                        .to({ x: this.rightX },this.dogTime2).call(this.toRightOver,this,[dog]);
+                        .to({ x: this.leftX },this.dogTime2,egret.Ease.quadInOut).call(this.toLeftOver,this,[dog]).wait(250)
+                        .to({ x: this.rightX },this.dogTime2,egret.Ease.quadInOut).call(this.toRightOver,this,[dog]).wait(250);
                     break;
                 case 2://向右
                     dog.x = this.leftX;
                     dog.toRight();
                     //汪跑起来
                     egret.Tween.get(dog,{ loop: true })
-                        .to({ x: this.rightX },this.dogTime3).call(this.toRightOver,this,[dog])
-                        .to({ x: this.leftX },this.dogTime3).call(this.toLeftOver,this,[dog]);
+                        .to({ x: this.rightX },this.dogTime3,egret.Ease.quadInOut).call(this.toRightOver,this,[dog]).wait(300)
+                        .to({ x: this.leftX },this.dogTime3,egret.Ease.quadInOut).call(this.toLeftOver,this,[dog]).wait(300);
                     break;
             }
             
@@ -132,6 +133,7 @@ class GamePanel extends PanelBase{
         }
         //实物归位
         egret.Tween.removeTweens(this["food"]);
+        this.isShoot = false;
         this["food"].y = this.foodY;
     }
     
@@ -175,14 +177,19 @@ class GamePanel extends PanelBase{
         this.gameOver();
     }
     
-    
+    private isShoot:Boolean=false;
     private shoot():void{
+        if(this.isShoot){
+            return;
+        }
+        this.isShoot=true;
         SoundManager.playBegin();
         //角色扔食物动画
         this.man.plit();
         //食物飞出去
         egret.Tween.get(this["food"])
             .to({ y: -100 },this.foodTime).call(function(){
+                this.isShoot=false;
                 this["food"].y = this.foodY;
             },this)
     }

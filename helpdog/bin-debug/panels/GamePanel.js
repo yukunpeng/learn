@@ -9,15 +9,16 @@ var GamePanel = (function (_super) {
         _super.call(this, "src/panels/GamePanelSkin.exml");
         this.totalTime = 30;
         //狗狗初始左右坐标
-        this.rightX = 540;
-        this.leftX = 100;
+        this.rightX = 590;
+        this.leftX = 50;
         //狗狗初始y坐标
         this.yArr = [158, 306, 474];
-        this.dogTime1 = 3000;
-        this.dogTime2 = 2500;
-        this.dogTime3 = 2000;
-        this.foodTime = 500;
+        this.dogTime1 = 2000;
+        this.dogTime2 = 1500;
+        this.dogTime3 = 1000;
+        this.foodTime = 2000;
         this.foodY = 660;
+        this.isShoot = false;
         //根据性别生成人物
         this.man = new Man(Hero.getIns().sex);
         this.man.x = 320;
@@ -40,6 +41,7 @@ var GamePanel = (function (_super) {
     var d = __define,c=GamePanel,p=c.prototype;
     //重置游戏
     p.resetGame = function () {
+        this.isShoot = false;
         this.score = 0;
         //狗粮的位置
         this["food"].y = this.foodY;
@@ -57,24 +59,24 @@ var GamePanel = (function (_super) {
                     dog.toRight();
                     //汪跑起来
                     egret.Tween.get(dog, { loop: true })
-                        .to({ x: this.rightX }, this.dogTime1).call(this.toRightOver, this, [dog])
-                        .to({ x: this.leftX }, this.dogTime1).call(this.toLeftOver, this, [dog]);
+                        .to({ x: this.rightX }, this.dogTime1, egret.Ease.quadInOut).call(this.toRightOver, this, [dog]).wait(200)
+                        .to({ x: this.leftX }, this.dogTime1, egret.Ease.quadInOut).call(this.toLeftOver, this, [dog]).wait(200);
                     break;
                 case 1:
                     dog.x = this.rightX;
                     dog.toLeft();
                     //汪跑起来
                     egret.Tween.get(dog, { loop: true })
-                        .to({ x: this.leftX }, this.dogTime2).call(this.toLeftOver, this, [dog])
-                        .to({ x: this.rightX }, this.dogTime2).call(this.toRightOver, this, [dog]);
+                        .to({ x: this.leftX }, this.dogTime2, egret.Ease.quadInOut).call(this.toLeftOver, this, [dog]).wait(250)
+                        .to({ x: this.rightX }, this.dogTime2, egret.Ease.quadInOut).call(this.toRightOver, this, [dog]).wait(250);
                     break;
                 case 2:
                     dog.x = this.leftX;
                     dog.toRight();
                     //汪跑起来
                     egret.Tween.get(dog, { loop: true })
-                        .to({ x: this.rightX }, this.dogTime3).call(this.toRightOver, this, [dog])
-                        .to({ x: this.leftX }, this.dogTime3).call(this.toLeftOver, this, [dog]);
+                        .to({ x: this.rightX }, this.dogTime3, egret.Ease.quadInOut).call(this.toRightOver, this, [dog]).wait(300)
+                        .to({ x: this.leftX }, this.dogTime3, egret.Ease.quadInOut).call(this.toLeftOver, this, [dog]).wait(300);
                     break;
             }
             this.dogArr[i].run();
@@ -135,6 +137,7 @@ var GamePanel = (function (_super) {
         }
         //实物归位
         egret.Tween.removeTweens(this["food"]);
+        this.isShoot = false;
         this["food"].y = this.foodY;
     };
     p.toRightOver = function (dog) {
@@ -152,12 +155,17 @@ var GamePanel = (function (_super) {
         this.gameOver();
     };
     p.shoot = function () {
+        if (this.isShoot) {
+            return;
+        }
+        this.isShoot = true;
         SoundManager.playBegin();
         //角色扔食物动画
         this.man.plit();
         //食物飞出去
         egret.Tween.get(this["food"])
             .to({ y: -100 }, this.foodTime).call(function () {
+            this.isShoot = false;
             this["food"].y = this.foodY;
         }, this);
     };

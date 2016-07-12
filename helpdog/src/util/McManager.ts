@@ -6,22 +6,29 @@
 class McManager {
     //获得掉毛汪
     public static getDiaomao(): egret.MovieClip {
-        return McManager.getMc("diaomao");
+        var mc: egret.MovieClip = McManager.getMc("diaomao");
+        mc.scaleX = mc.scaleY = 0.5;
+        return mc;
     }
 
     //获得饥饿汪
     public static getJie(): egret.MovieClip {
-        return McManager.getMc("jie");
+        var mc: egret.MovieClip = McManager.getMc("jie");
+        mc.scaleX = mc.scaleY = 0.5;
+        return mc;
     }
 
     //获得生病汪
     public static getShengbing(): egret.MovieClip {
-        return McManager.getMc("shengbing");
+        var mc: egret.MovieClip = McManager.getMc("shengbing");
+        mc.scaleX=mc.scaleY=0.5;
+        return mc;
     }
     
     //获得扔狗粮的女孩
     public static getGirl(): egret.MovieClip {
-        return McManager.getMc("girl");
+        var mc: egret.MovieClip = McManager.getMc("girl");
+        return mc;
     }
     
     //获得扔狗粮的男孩

@@ -41,16 +41,18 @@ class Dog extends egret.Sprite{
         this.mc.gotoAndPlay("run",-1);
     }
     public sit(): void {
-        this.mc.scaleX = 1;
+        this.mc.scaleX = this.mc.scaleY= 1;
         this.mc.gotoAndPlay("sit",-1);
     }
     
     public toRight():void{
-        this.mc.scaleX=1;
+        this.mc.scaleX = 0.5;
+        this.mc.scaleY = 0.5;
     }
     
     public toLeft(): void {
-        this.mc.scaleX = -1;
+        this.mc.scaleX = -0.5;
+        this.mc.scaleY = 0.5;
     }
     
     public constructor(type:string) {
@@ -62,17 +64,17 @@ class Dog extends egret.Sprite{
         switch(type){
                case "jie":
                    this.mc = McManager.getJie();
-                   _y=-120;
+                   _y=-80;
                    wl="jiefood_png";
                    break;
                case "shengbing":
                    this.mc = McManager.getShengbing();
-                   _y = -120;
+                   _y = -80;
                    wl = "shengbingfood_png";
                    break;
                case "diaomao":
                    this.mc = McManager.getDiaomao();
-                   _y = -160;
+                   _y = -100;
                    wl = "diaomaofood_png";
                    break;
     	   }

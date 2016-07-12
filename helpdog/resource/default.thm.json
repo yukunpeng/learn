@@ -55,7 +55,7 @@
     },
     {
       "path": "src/panels/GamePanelSkin.exml",
-      "content": "<?xml version='1.0' encoding='utf-8'?>\r\n<e:Skin class=\"GamePanelSkin\" width=\"640\" height=\"960\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\" xmlns:ns1=\"*\">\r\n\t<e:Image source=\"gamebg_png\" x=\"0\" y=\"0\"/>\r\n\t<e:Image id=\"food\" source=\"food_png\" x=\"302\" y=\"600\"/>\r\n\t<e:Image source=\"clock_png\" x=\"488\" y=\"14\"/>\r\n\t<e:Label id=\"timerTf\" text=\"30 S\" x=\"551\" y=\"34\" width=\"63\" textAlign=\"center\" fontFamily=\"微软雅黑\" textColor=\"0xFFFFFF\" size=\"30\"/>\r\n</e:Skin>"
+      "content": "<?xml version='1.0' encoding='utf-8'?>\r\n<e:Skin class=\"GamePanelSkin\" width=\"640\" height=\"960\" xmlns:e=\"http://ns.egret.com/eui\" xmlns:w=\"http://ns.egret.com/wing\" xmlns:ns1=\"*\">\r\n\t<e:Image source=\"gamebg_png\" x=\"0\" y=\"0\"/>\r\n\t<e:Image id=\"food\" source=\"food_png\" x=\"310\" y=\"614\" width=\"27\" height=\"32\"/>\r\n\t<e:Image source=\"clock_png\" x=\"488\" y=\"14\"/>\r\n\t<e:Label id=\"timerTf\" text=\"30 S\" x=\"551\" y=\"34\" width=\"63\" textAlign=\"center\" fontFamily=\"微软雅黑\" textColor=\"0xFFFFFF\" size=\"30\"/>\r\n</e:Skin>"
     },
     {
       "path": "src/panels/LoadPanelSkin.exml",

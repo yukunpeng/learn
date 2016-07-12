@@ -14,17 +14,17 @@ var Dog = (function (_super) {
         switch (type) {
             case "jie":
                 this.mc = McManager.getJie();
-                _y = -120;
+                _y = -80;
                 wl = "jiefood_png";
                 break;
             case "shengbing":
                 this.mc = McManager.getShengbing();
-                _y = -120;
+                _y = -80;
                 wl = "shengbingfood_png";
                 break;
             case "diaomao":
                 this.mc = McManager.getDiaomao();
-                _y = -160;
+                _y = -100;
                 wl = "diaomaofood_png";
                 break;
         }
@@ -64,14 +64,16 @@ var Dog = (function (_super) {
         this.mc.gotoAndPlay("run", -1);
     };
     p.sit = function () {
-        this.mc.scaleX = 1;
+        this.mc.scaleX = this.mc.scaleY = 1;
         this.mc.gotoAndPlay("sit", -1);
     };
     p.toRight = function () {
-        this.mc.scaleX = 1;
+        this.mc.scaleX = 0.5;
+        this.mc.scaleY = 0.5;
     };
     p.toLeft = function () {
-        this.mc.scaleX = -1;
+        this.mc.scaleX = -0.5;
+        this.mc.scaleY = 0.5;
     };
     return Dog;
 }(egret.Sprite));
