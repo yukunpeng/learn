@@ -1,12 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="RolePanelSkin" width="640" height="960" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
-	<e:Image source="selectbg_png" x="0" y="0"/>
-	<e:Image source="title_png" x="56" y="352"/>
-	<e:Image id="girlSelectBtn" source="girlselect_png" x="111" y="184" visible="false"/>
-	<e:Image id="manSelectBtn" source="manselect_png" x="18" y="182" visible="false"/>
-	<e:Image id="girlNormalBtn" source="girl_png" x="319" y="325"/>
-	<e:Image id="manNormalBtn" source="boy_png" x="48" y="325"/>
-	<e:Image source="selectfront_png" x="-9" y="655"/>
-	<e:Image id="beginBtn" source="selectbtn_png" x="143" y="672" visible="false"/>
-	<e:Image id="selectBtn" source="tipselectbtn_png" x="150" y="694"/>
+<e:Skin class="RolePanelSkin" width="640" height="832" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="selectbg_png" x="0" y="0"/>
+	<e:Image id="girlNormalBtn" source="girl_png" x="349" y="245"/>
+	<e:Image id="manNormalBtn" source="boy_png" x="24" y="245"/>
+	<e:Image id="manSelectBtn" source="manselect_png" x="-22" y="167" touchEnabled="false" visible="false"/>
+	<e:Image id="girlSelectBtn" source="girlselect_png" x="151" y="167" touchEnabled="false" visible="false"/>
+	<e:Image source="selectfront_png" x="0" y="324" touchEnabled="false"/>
+	<e:Image id="beginBtn" source="selectbtn_png" x="143" y="557"/>
+	<e:Image id="selectBtn" source="tipselectbtn_png" x="150" y="579"/>
 </e:Skin>

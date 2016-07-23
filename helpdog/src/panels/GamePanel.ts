@@ -28,7 +28,6 @@ class GamePanel extends PanelBase{
     
     private man:Man;
     
-    
     //重置游戏
     public resetGame():void{
         this.isShoot=false;
@@ -111,15 +110,15 @@ class GamePanel extends PanelBase{
             switch(dog.type){
                case "shengbing":
                     dog.x = 475;
-                    dog.y = 930;
+                    dog.y = 810;
                     break;
                case "jie":
                    dog.x = 265;
-                   dog.y = 934;
+                   dog.y = 813;
                    break;
                 case "diaomao":
                     dog.x = 205;
-                    dog.y = 970;
+                    dog.y = 838;
                     break;
             }
             this.dogArr.splice(i,1);
@@ -150,7 +149,7 @@ class GamePanel extends PanelBase{
     	   //根据性别生成人物
         this.man = new Man(Hero.getIns().sex);
         this.man.x = 320;
-        this.man.y = 960;
+        this.man.y = 832;
         this.addChild(this.man);
         this.man.touchEnabled=true;
         this.man.addEventListener(egret.TouchEvent.TOUCH_TAP,this.shoot,this);

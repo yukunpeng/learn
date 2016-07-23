@@ -1,6 +1,0 @@
-{
-	"1":{"name":"蚯蚓","attack":1,"defens":1,"coin":1,"life":10,"exp":1},
-	"2":{"name":"土鳖","attack":2,"defens":2,"coin":2,"life":20,"exp":2},
-	"3":{"name":"蚂蚱","attack":3,"defens":3,"coin":3,"life":30,"exp":3},
-	"4":{"name":"蟋蟀","attack":4,"defens":4,"coin":4,"life":40,"exp":4}
-}

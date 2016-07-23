@@ -1,6 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="ZuzhiSkin" width="600" height="600" xmlns:e="http://ns.egret.com/eui">
-	<e:Label text="董事会" x="254" y="16"/>
-	<e:Label y="53" text="董事长" x="256"/>
-	<e:Rect height="5" width="501" x="61" y="113"/>
-</e:Skin>
