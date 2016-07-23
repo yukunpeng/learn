@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ResultPanelSkin" width="640" height="832" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="resultbg_png" x="0" y="0"/>
+	<e:Group id="failGroup" height="260" width="528" x="66" y="110" visible="false">
+		<e:Label y="52" height="72" text="恭喜" textAlign="center" width="248" size="68" x="138" textColor="0xFF0000" bold="true" fontFamily="微软雅黑"/>
+		<e:Label id="failTf" y="160" text="您打败了全国98%的网友" x="73" width="424" height="44" textColor="0xFF0000" textAlign="center" fontFamily="微软雅黑"/>
+	</e:Group>
+	<e:Group id="winGroup" x="76" y="120" width="528" height="260">
+		<e:Label id="winTf" x="52" y="105" textColor="0xFF0000" text="你爆发了6%的爱宠力量。" fontFamily="微软雅黑" textAlign="center" width="424" height="44"/>
+	</e:Group>
+	<e:Image id="dogPic" source="housailei_png" x="36" y="356"/>
+	<e:Button id="shareBtn" y="725" x="349">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="shareup_png" source.down="sharedown_png"/>
+				<e:Label id="labelDisplay0" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Button id="cancelBtn" x="349" y="620">
+		<e:skinName>
+			<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="rehelpup_png" source.down="rehelpdown_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+			</e:Skin>
+		</e:skinName>
+	</e:Button>
+</e:Skin>

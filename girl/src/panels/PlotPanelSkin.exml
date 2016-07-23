@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="PlotPanelSkin" width="640" height="832" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group id="plotGroup" height="960" width="640" x="0" y="0">
+		<e:Image source="plot1_jpg" x="286" y="138"/>
+		<e:Image source="plot2_jpg" x="544" y="404"/>
+		<e:Image source="plot3_jpg" x="730" y="491"/>
+		<e:layout>
+			<e:HorizontalLayout/>
+		</e:layout>
+	</e:Group>
+	<e:Image id="preBtn" source="pre_png" x="592" anchorOffsetX="20" anchorOffsetY="35" verticalCenter="0"/>
+	<e:Image id="jumpBtn" source="jump_png" x="551" y="18"/>
+</e:Skin>
