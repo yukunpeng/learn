@@ -1,4 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<e:Skin class="WaterSkin" width="480" height="800" xmlns:e="http://ns.egret.com/eui">
-	<e:Label text="未注册" x="-12" y="234" size="110" rotation="-45" alpha="0.5" textColor="0xFF0000"/>
-</e:Skin>
