@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="BtnSelectSkin" width="400" height="50" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Button id="btn" label="按钮" left="0" right="0" top="0" bottom="0"/>
+</e:Skin>

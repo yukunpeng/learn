@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="BgSkin" width="480" height="1600" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="firebg_jpg" y="0" x="0" id="bg0"/>
+	<e:Image source="firebg_jpg" y="800" id="bg1" x="0"/>
+</e:Skin>

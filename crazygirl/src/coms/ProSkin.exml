@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="ProSkin" width="50" height="150" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Image source="panelbg_png" scale9Grid="10,8,29,13" y="0" height="150" left="0" right="0"/>
+	<e:Rect id="rect" height="132" width="33" x="9" y="8" fillColor="0xC69E00"/>
+</e:Skin>
